@@ -564,8 +564,69 @@ $$\psi(0) = \frac{1}{2} \left( \sqrt{2}\psi_0 + \psi_1 + \psi_2 \right)$$
 \subsection{2.30}
 已知一体系哈密顿量 $\hat{H}$ 不含 $t$, $\hat{H}$ 具有非简并本征值 $E_{\lambda}, \lambda = 1, 2, \cdots$, 相应本征态矢为 $|\psi_{\lambda}\rangle: \hat{H}|\psi_{\lambda}\rangle = E_{\lambda}|\psi_{\lambda}\rangle$。又已知另一可观察量 $\hat{A}$ 的非简并本征值与本征态矢为 $a_n$ 与 $|\phi_n\rangle: \hat{A}|\phi_n\rangle = a_n|\phi_n\rangle, n = 1, 2, \cdots$。设体系初态为 $|\psi_{\lambda}\rangle$, 问(1)在初态 $|\psi_{\lambda}\rangle$ 下对 $\hat{A}$ 测量时, 测得 $\hat{A}$ 的平均值是什么? 这一测量给出 $\hat{A}$ 的值为 $a_m$ 的概率有多大? (2)如果上次对 $\hat{A}$ 测量得 $a_m$, 经过时间间隔 $t$ 以后再次测量 $\hat{A}$ 仍得 $a_m$ 的概率有多大?
 
+
+
+\newpage
 \subsection{2.31}
 计算 $\hat{p} \times \hat{L} + \hat{L} \times \hat{p} = ?$
+
+\subsubsection{解答}
+在直角坐标系下
+\begin{equation}
+    \begin{aligned}
+        \hat{\boldsymbol{p}}\times \hat{\boldsymbol{L}}&=\left| \begin{matrix}
+	\boldsymbol{i}&		\boldsymbol{j}&		\boldsymbol{k}\\
+	\hat{p}_x&		\hat{p}_y&		\hat{p}_z\\
+	\hat{L}_x&		\hat{L}_y&		\hat{L}_z\\
+\end{matrix} \right|=\left( \hat{p}_y\hat{L}_z-\hat{p}_z\hat{L}_y \right) \boldsymbol{i}+\left( \hat{p}_z\hat{L}_x-\hat{p}_x\hat{L}_z \right) \boldsymbol{j}+\left( \hat{p}_x\hat{L}_y-\hat{p}_y\hat{L}_x \right) \boldsymbol{k}
+\\
+\hat{\boldsymbol{L}}\times \hat{\boldsymbol{p}}&=\left| \begin{matrix}
+	\boldsymbol{i}&		\boldsymbol{j}&		\boldsymbol{k}\\
+	\hat{L}_x&		\hat{L}_y&		\hat{L}_z\\
+	\hat{p}_x&		\hat{p}_y&		\hat{p}_z\\
+\end{matrix} \right|=\left( \hat{L}_y\hat{p}_z-\hat{L}_z\hat{p}_y \right) \boldsymbol{i}+\left( \hat{L}_z\hat{p}_x-\hat{L}_x\hat{p}_z \right) \boldsymbol{j}+\left( \hat{L}_x\hat{p}_y-\hat{L}_y\hat{p}_x \right) \boldsymbol{k}
+    \end{aligned}
+\end{equation}
+计算
+\begin{equation}
+    \begin{aligned}
+        \hat{\mathbf{p}}\times \hat{\mathbf{L}}+\hat{\mathbf{L}}\times \hat{\mathbf{p}}&=\left( \hat{p}_y\hat{L}_z-\hat{p}_z\hat{L}_y \right) \boldsymbol{i}+\left( \hat{p}_z\hat{L}_x-\hat{p}_x\hat{L}_z \right) \boldsymbol{j}+\left( \hat{p}_x\hat{L}_y-\hat{p}_y\hat{L}_x \right) \boldsymbol{k}
+\\
+&+\left( \hat{L}_y\hat{p}_z-\hat{L}_z\hat{p}_y \right) \boldsymbol{i}+\left( \hat{L}_z\hat{p}_x-\hat{L}_x\hat{p}_z \right) \boldsymbol{j}+\left( \hat{L}_x\hat{p}_y-\hat{L}_y\hat{p}_x \right) \boldsymbol{k}
+\\
+&=\left( \hat{p}_y\hat{L}_z-\hat{p}_z\hat{L}_y+\hat{L}_y\hat{p}_z-\hat{L}_z\hat{p}_y \right) \boldsymbol{i}
+\\
+&+\left( \hat{p}_z\hat{L}_x-\hat{p}_x\hat{L}_z+\hat{L}_z\hat{p}_x-\hat{L}_x\hat{p}_z \right) \boldsymbol{j}
+\\
+&+\left( \hat{p}_x\hat{L}_y-\hat{p}_y\hat{L}_x+\hat{L}_x\hat{p}_y-\hat{L}_y\hat{p}_x \right) \boldsymbol{k}
+\\
+&=\left[ \left( \hat{p}_y\hat{L}_z-\hat{L}_z\hat{p}_y \right) +\left( \hat{L}_y\hat{p}_z-\hat{p}_z\hat{L}_y \right) \right] \boldsymbol{i}
+\\
+&+\left[ \left( \hat{p}_z\hat{L}_x-\hat{L}_x\hat{p}_z \right) +\left( \hat{L}_z\hat{p}_x-\hat{p}_x\hat{L}_z \right) \right] \boldsymbol{j}
+\\
+&+\left[ \left( \hat{p}_x\hat{L}_y-\hat{L}_y\hat{p}_x \right) +\left( \hat{L}_x\hat{p}_y-\hat{p}_y\hat{L}_x \right) \right] \boldsymbol{k}
+\\
+&=\left\{ \left[ \hat{p}_y,\hat{L}_z \right] +\left[ \hat{L}_y,\hat{p}_z \right] \right\} \boldsymbol{i}+\left\{ \left[ \hat{p}_z,\hat{L}_x \right] +\left[ \hat{L}_z,\hat{p}_x \right] \right\} \boldsymbol{j}+\left\{ \left[ \hat{p}_x,\hat{L}_y \right] +\left[ \hat{L}_x,\hat{p}_y \right] \right\} \boldsymbol{k}
+\\
+&=\left( i\hbar \hat{p}_x+i\hbar \hat{p}_x \right) \boldsymbol{i}+\left( i\hbar \hat{p}_y+i\hbar \hat{p}_y \right) \boldsymbol{j}+\left( i\hbar \hat{p}_z+i\hbar \hat{p}_z \right) \boldsymbol{k}
+\\
+&=2\mathrm{i}\hbar \left( \hat{p}_x\boldsymbol{i}+\hat{p}_y\boldsymbol{j}+\hat{p}_z\boldsymbol{k} \right) 
+\\
+&=2\mathrm{i}\hbar \hat{\boldsymbol{p}}
+    \end{aligned}
+\end{equation}
+
+
+\subsubsection{解答：写法2}
+
+
+
+\subsubsection{解答2:利用}
+
+
+
+
+
 
 \subsection{2.32}
 定义角动量升降算符 $\hat{J}_{\pm} = \hat{J}_x \pm i \hat{J}_y$，(1) 证明算符 $\hat{J}_+ \hat{J}_- $ 与 $\hat{J}_- \hat{J}_+ $ 的厄米性，并求出它们的本征态与本征值；(2) 若力学量算符 $\hat{F}$ 满足对易关系 $[\hat{F}, \hat{J}_{\mu}] = 0, \mu = x, y, z$，试证明 $\hat{F}$ 在 $\hat{J}^2, \hat{J}_z$ 共同本征态上的平均值与磁量子数无关。
