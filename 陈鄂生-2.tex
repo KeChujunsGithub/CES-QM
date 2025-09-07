@@ -189,7 +189,124 @@ $$U_x(a)\psi(x) = \psi(x-a)$$
 一维谐振子处于定态 $\psi_n$，计算 $\Delta x \Delta p$，检验测不准关系。
 补充
 
-解答：
+\subsubsection{解法1}
+
+\begin{equation}
+    \begin{aligned}
+        x\psi _n&=\frac{1}{\alpha}\left( \sqrt{\frac{n}{2}}\psi _{n-1}+\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) 
+\\
+\frac{\mathrm{d}\psi _n}{\mathrm{d}x}&=\alpha \left( \sqrt{\frac{n}{2}}\psi _{n-1}-\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) 
+    \end{aligned}
+\end{equation}
+2.计算期望值
+坐标
+\begin{equation}
+    \begin{aligned}
+        \bar{x}&=\int{\psi _{n}^{*}\hat{x}\psi _n\mathrm{d}x}
+\\
+&=\int{\psi _{n}^{*}x\psi _n\mathrm{d}x}
+\\
+&=\frac{1}{\alpha}\int{\psi _{n}^{*}\left( \sqrt{\frac{n}{2}}\psi _{n-1}+\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) \mathrm{d}x}
+\\
+&=\frac{1}{\alpha}\sqrt{\frac{n}{2}}\int{\psi _{n}^{*}\psi _{n-1}\mathrm{d}x}+\frac{1}{\alpha}\sqrt{\frac{n+1}{2}}\int{\psi _{n}^{*}\psi _{n+1}\mathrm{d}x}
+\\
+&=\frac{1}{\alpha}\sqrt{\frac{n}{2}}\cdot 0+\frac{1}{\alpha}\sqrt{\frac{n+1}{2}}\cdot 0
+\\
+&=0
+    \end{aligned}
+\end{equation}
+动量
+\begin{equation}
+    \begin{aligned}
+        \bar{p}&=-\mathrm{i}\hbar \int{\psi _{n}^{*}\hat{p}\psi _n\mathrm{d}x}
+\\
+&=-\mathrm{i}\hbar \int{\psi _{n}^{*}\frac{\mathrm{d}\psi _n}{\mathrm{d}x}\mathrm{d}x}
+\\
+&=-\mathrm{i}\hbar \alpha \int{\psi _{n}^{*}\left( \sqrt{\frac{n}{2}}\psi _{n-1}-\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) \mathrm{d}x}
+\\
+&=-\mathrm{i}\hbar \alpha \sqrt{\frac{n}{2}}\int{\psi _{n}^{*}\psi _{n-1}\mathrm{d}x}+\mathrm{i}\hbar \alpha \sqrt{\frac{n+1}{2}}\int{\psi _{n}^{*}\psi _{n+1}\mathrm{d}x}
+\\
+&=-\mathrm{i}\hbar \alpha \sqrt{\frac{n}{2}}\cdot 0+\mathrm{i}\hbar \alpha \sqrt{\frac{n+1}{2}}\cdot 0
+\\
+&=0
+    \end{aligned}
+\end{equation}
+2.2计算平方的期望值
+坐标
+\begin{equation}
+    \begin{aligned}
+        \overline{x^2}&=\int{\psi _{n}^{*}\hat{x}^2\psi _n\mathrm{d}x}
+\\
+&=\int{\left( \hat{x}\psi _n \right) ^*\hat{x}\psi _n\mathrm{d}x}
+\\
+&=\int{\left( x\psi _n \right) ^*x\psi _n\mathrm{d}x}
+\\
+&=\frac{1}{\alpha ^2}\int{\left( \sqrt{\frac{n}{2}}\psi _{n-1}+\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) ^*\left( \sqrt{\frac{n}{2}}\psi _{n-1}+\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) \mathrm{d}x}
+\\
+&=\frac{1}{\alpha ^2}\int{\left( \sqrt{\frac{n}{2}}\psi _{n-1}^{*}+\sqrt{\frac{n+1}{2}}\psi _{n+1}^{*} \right) \left( \sqrt{\frac{n}{2}}\psi _{n-1}+\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) \mathrm{d}x}
+\\
+&=\frac{1}{\alpha ^2}\frac{n}{2}\int{\psi _{n-1}^{*}\psi _{n-1}\mathrm{d}x}+\frac{1}{\alpha ^2}\frac{n+1}{2}\int{\psi _{n+1}^{*}\psi _{n+1}\mathrm{d}x}+\frac{1}{\alpha ^2}\frac{\sqrt{n\left( n+1 \right)}}{2}\int{\psi _{n+1}^{*}\psi _{n-1}\mathrm{d}x}+\frac{1}{\alpha ^2}\frac{\sqrt{n\left( n+1 \right)}}{2}\int{\psi _{n-1}^{*}\psi _{n+1}\mathrm{d}x}
+\\
+&=\frac{1}{\alpha ^2}\frac{n}{2}\cdot 1+\frac{1}{\alpha ^2}\frac{n+1}{2}\cdot 1+\frac{1}{\alpha ^2}\frac{\sqrt{n\left( n+1 \right)}}{2}\cdot 0+\frac{1}{\alpha ^2}\frac{\sqrt{n\left( n+1 \right)}}{2}\cdot 0
+\\
+&=\frac{1}{\alpha ^2}\left( n+\frac{1}{2} \right) 
+    \end{aligned}
+\end{equation}
+动量
+\begin{equation}
+    \begin{aligned}
+        \overline{p^2}&=\int{\psi _{n}^{*}\hat{p}^2\psi _n\mathrm{d}x}
+\\
+&=\int{\left( \hat{p}\psi _n \right) ^*\hat{p}\psi _n\mathrm{d}x\mathrm{d}x}
+\\
+&=\hbar ^2\int{\left( \frac{\mathrm{d}\psi _n}{\mathrm{d}x} \right) ^*\left( \frac{\mathrm{d}\psi _n}{\mathrm{d}x} \right) \mathrm{d}x}
+\\
+&=\hbar ^2\alpha ^2\int{\left( \sqrt{\frac{n}{2}}\psi _{n-1}-\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) ^*\left( \sqrt{\frac{n}{2}}\psi _{n-1}-\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) \mathrm{d}x}
+\\
+&=\hbar ^2\alpha ^2\int{\left( \sqrt{\frac{n}{2}}\psi _{n-1}^{*}-\sqrt{\frac{n+1}{2}}\psi _{n+1}^{*} \right) \left( \sqrt{\frac{n}{2}}\psi _{n-1}-\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) \mathrm{d}x}
+\\
+&=\frac{\hbar ^2\alpha ^2n}{2}\int{\psi _{n-1}^{*}\psi _{n-1}\mathrm{d}x}+\frac{\hbar ^2\alpha ^2\left( n+1 \right)}{2}\int{\psi _{n+1}^{*}\psi _{n+1}\mathrm{d}x}-\frac{\hbar ^2\alpha ^2\sqrt{n\left( n+1 \right)}}{2}\int{\psi _{n+1}^{*}\psi _{n-1}\mathrm{d}x}-\frac{\hbar ^2\alpha ^2\sqrt{n\left( n+1 \right)}}{2}\int{\psi _{n-1}^{*}\psi _{n+1}\mathrm{d}x}
+\\
+&=\frac{\hbar ^2\alpha ^2n}{2}\cdot 1+\frac{\hbar ^2\alpha ^2\left( n+1 \right)}{2}\cdot 1-\frac{\hbar ^2\alpha ^2\sqrt{n\left( n+1 \right)}}{2}\cdot 0-\frac{\hbar ^2\alpha ^2\sqrt{n\left( n+1 \right)}}{2}\cdot 0
+\\
+&=\hbar ^2\alpha ^2\biggl( n+\frac{1}{2} \biggr) 
+    \end{aligned}
+\end{equation}
+3.由上面计算的结论
+\begin{equation}
+    \begin{aligned}
+        \bar{x}&=0\Rightarrow \bar{x}^2=0
+\\
+\bar{p}&=0\Rightarrow \bar{p}^2=0
+\\
+\overline{x^2}&=\frac{1}{\alpha ^2}\left( n+\frac{1}{2} \right) 
+\\
+\overline{p^2}&=\hbar ^2\alpha ^2\biggl( n+\frac{1}{2} \biggr) 
+    \end{aligned}
+\end{equation}
+计算方差
+\begin{equation}
+    \begin{aligned}
+        \Delta x&=\sqrt{\overline{x^2}-\bar{x}^2}=\frac{1}{\alpha}\sqrt{n+\frac{1}{2}}
+\\
+\Delta p&=\sqrt{\overline{p^2}-\bar{p}^2}=\hbar \alpha \sqrt{n+\frac{1}{2}}
+    \end{aligned}
+\end{equation}
+计算不确定关系
+\begin{equation}
+    \begin{aligned}
+        \Delta x\Delta p&=\frac{1}{\alpha}\sqrt{n+\frac{1}{2}}\cdot \hbar \alpha \sqrt{n+\frac{1}{2}}
+\\
+&=\left( n+\frac{1}{2} \right) \hbar 
+    \end{aligned}
+\end{equation}
+符合
+\begin{equation}
+    \Delta x\Delta p\geqslant \frac{\hbar}{2}
+\end{equation}
+
+
+
 
 
 \subsection{2.21}
