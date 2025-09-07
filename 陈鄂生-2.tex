@@ -11,8 +11,7 @@
 \subsection{2.1}
 证明空间反演算符 $\hat{\Pi}[\hat{\Pi}\psi(x)=\psi(-x)]$ 是厄米算符。指出在什么条件下，$\hat{p}=-i\hbar\frac{d}{dx}$ 是厄米算符。
 
-解答：
-
+\subusbsection{解答}
 \begin{equation}
     \begin{aligned}
         \int_{-\infty}^{+\infty}{\mathrm{d}x}\psi ^*(x)\hat{\Pi}\varphi (x)&=\int_{-\infty}^{+\infty}{\mathrm{d}x}\psi ^*(x)\varphi (-x)
@@ -33,7 +32,9 @@
     \int_{-\infty}^{+\infty}{\mathrm{d}x}\psi ^*(x)\left[ \hat{\Pi}\psi (x) \right] =\int_{-\infty}^{+\infty}{\mathrm{d}x}\left[ \hat{\Pi}\psi (x) \right] ^*\varphi (x)
 \end{equation}
 
-解答：
+\subsubsection{解答2}
+
+
 最终得到
 \begin{equation}
     \int_{-\infty}^{+\infty}{\mathrm{d}x}\psi ^*(x)\bigl[ \hat{p}\psi (x) \bigr] =\int_{-\infty}^{+\infty}{\mathrm{d}x}\bigl[ \hat{p}\psi (x) \bigr] ^*\varphi (x)
@@ -48,9 +49,58 @@
 \subsection{2.3}
 证明 $[\hat{p}_x, f(x)] = -i\hbar \frac{\partial}{\partial x} f(x)$, $[x, f(\hat{p}_x)] = i\hbar \frac{\partial}{\partial \hat{p}_x} f(\hat{p}_x)$.
 
+\newpage
 \subsection{2.4}
 设算符 $\hat{A}$ 满足条件 $\hat{A}^2 = 1$，证明 $e^{i\alpha \hat{A}} = \cos \alpha + i \sin \alpha \hat{A}$，其中 $\alpha$ 为实常数。
 
+\subsubsection{解答}
+1.由
+\begin{equation}
+    \hat{A}^2=1
+\end{equation}
+得到
+\begin{equation}
+    \begin{aligned}
+        \hat{A}^{2k}&=(\hat{A}^2)^k=1^k=1
+\\
+\hat{A}^{2k+1}&=\hat{A}\cdot (\hat{A}^2)^k=\hat{A}\cdot 1^k=\hat{A}
+    \end{aligned}
+\end{equation}
+2.泰勒展开
+\begin{equation}
+    \begin{aligned}
+        e^x&=\sum_{n=0}^{\infty}{\frac{x^n}{n!}}
+\\
+\cos x&=\sum_{n=0}^{\infty}{\frac{\left( -1 \right) ^n}{\left( 2n \right) !}}x^{2n}
+\\
+\sin x&=\sum_{n=0}^{\infty}{\frac{\left( -1 \right) ^n}{\left( 2n+1 \right) !}}x^{2n+1}
+    \end{aligned}
+\end{equation}
+3.计算
+\begin{equation}
+    \begin{aligned}
+        e^{i\alpha \hat{A}}&=\sum_{n=0}^{\infty}{\frac{(i\alpha \hat{A})^n}{n!}}
+\\
+&=\sum_{n=0}^{\infty}{\frac{i^n\alpha ^n}{n!}}\hat{A}^n
+\\
+&=\sum_{k=0}^{\infty}{\frac{i^{2k}\alpha ^{2k}}{\left( 2k \right) !}}\hat{A}^{2k}+\sum_{k=0}^{\infty}{\frac{i^{2k+1}\alpha ^{2k+1}}{\left( 2k+1 \right) !}}\hat{A}^{2k+1}
+\\
+&=\sum_{k=0}^{\infty}{\frac{\left( -1 \right) ^k}{\left( 2k \right) !}}\alpha ^{2k}+i\hat{A}\sum_{k=0}^{\infty}{\frac{\left( -1 \right) ^k}{\left( 2k+1 \right) !}}\alpha ^{2k+1}
+\\
+&=\cos \alpha +i\hat{A}\sin \alpha 
+    \end{aligned}
+\end{equation}
+
+其中
+\begin{equation}
+    \begin{aligned}
+        \left( i\alpha \right) ^{2k}&=i^{2k}\alpha ^{2k}=\left( i^2 \right) ^k\alpha ^{2k}=\left( -1 \right) ^k\alpha ^{2k}
+\\
+\left( i\alpha \right) ^{2k+1}&=i^{2k+1}\alpha ^{2k+1}=i\cdot \left( i^2 \right) ^k\alpha ^{2k+1}=i\cdot \left( -1 \right) ^k\alpha ^{2k+1}
+    \end{aligned}
+\end{equation}
+
+\newpage
 \subsection{2.5}
 设算符 $\hat{K} = \hat{L} \hat{M}$，$\hat{L} \hat{M} - \hat{M} \hat{L} = 1$，又设 $\varphi$ 为 $\hat{K}$ 的本征矢，相应本征值为 $\lambda$。证明 $u = \hat{L} \varphi$ 和 $v = \hat{M} \varphi$ 也是 $\hat{K}$ 的本征矢，并求出相应的本征值。
 
@@ -144,6 +194,11 @@ $$\langle k|[\hat{F}^+, [\hat{H}, \hat{F}]] |k \rangle = \sum_{n} (E_n - E_k) \l
 已知 $Y_{lm}(\theta, \phi)$ 是 $\hat{L}^2$ 和 $\hat{L}_z$ 的共同本征函数,本征值分别为 $l(l+1)\hbar^2$ 和 $m\hbar$。令 $\hat{L}_{\pm} = \hat{L}_x \pm i \hat{L}_y$。(1) 证明 $\hat{L}_{\pm} Y_{lm}(\theta, \phi)$ 仍是 $\hat{L}^2$ 和 $\hat{L}_z$ 的共同本征函数,求出它们的本征值；(2) 推导公式
 $$\hat{L}_{\pm} Y_{lm}(\theta, \phi) = \sqrt{l(l+1) - m(m \pm 1)} \hbar Y_{l m \pm 1}(\theta, \phi)$$
 
+\subsubsection{2.9.1}
+
+\subsubsection{2.9.2}
+
+
 \subsection{2.10}
 证明 $e^{\hat{A}} \hat{B} e^{-\hat{A}} = \hat{B} + [\hat{A}, \hat{B}] + \frac{1}{2!} [\hat{A}, [\hat{A}, \hat{B}]] + \frac{1}{3!} [\hat{A}, [\hat{A}, [\hat{A}, \hat{B}]]] + \cdots$。
 
@@ -185,12 +240,13 @@ $$(\hat{H} - \omega_0)V(x) = F(x)$$
 $$U_x(a)\psi(x) = \psi(x-a)$$
 其中 $a$ 为实数。(1)证明 $U_x(a) = e^{-i a \hat{p}_x / \hbar}$；(2)证明 $U_x(a)$ 为幺正算符。
 
+\newpage
 \subsection{2.20}
 一维谐振子处于定态 $\psi_n$，计算 $\Delta x \Delta p$，检验测不准关系。
 补充
 
 \subsubsection{解法1}
-
+1.对于一维谐振子
 \begin{equation}
     \begin{aligned}
         x\psi _n&=\frac{1}{\alpha}\left( \sqrt{\frac{n}{2}}\psi _{n-1}+\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) 
@@ -305,10 +361,162 @@ $$U_x(a)\psi(x) = \psi(x-a)$$
     \Delta x\Delta p\geqslant \frac{\hbar}{2}
 \end{equation}
 
+\subsubsection{解法2}
+1.对于一维谐振子
+\begin{equation}
+    \begin{aligned}
+        x\psi _n&=\frac{1}{\alpha}\left( \sqrt{\frac{n}{2}}\psi _{n-1}+\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) 
+\\
+\frac{\mathrm{d}\psi _n}{\mathrm{d}x}&=\alpha \left( \sqrt{\frac{n}{2}}\psi _{n-1}-\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) 
+    \end{aligned}
+\end{equation}
+写出
+\begin{equation}
+    \begin{aligned}
+        x\psi _{n-1}&=\frac{1}{\alpha}\left( \sqrt{\frac{n-1}{2}}\psi _{n-2}+\sqrt{\frac{n}{2}}\psi _n \right) 
+\\
+x\psi _{n+1}&=\frac{1}{\alpha}\left( \sqrt{\frac{n+1}{2}}\psi _n+\sqrt{\frac{n+2}{2}}\psi _{n+2} \right) 
+\\
+\frac{\mathrm{d}\psi _{n-1}}{\mathrm{d}x}&=\alpha \left( \sqrt{\frac{n-1}{2}}\psi _{n-2}-\sqrt{\frac{n}{2}}\psi _n \right) 
+\\
+\frac{\mathrm{d}\psi _{n+1}}{\mathrm{d}x}&=\alpha \left( \sqrt{\frac{n+1}{2}}\psi _n-\sqrt{\frac{n+2}{2}}\psi _{n+2} \right) 
+    \end{aligned}
+\end{equation}
+可计算
+\begin{equation}
+    \begin{aligned}
+        x^2\psi _n&=x\cdot x\psi _n
+\\
+&=x\cdot \frac{1}{\alpha}\left( \sqrt{\frac{n}{2}}\psi _{n-1}+\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) 
+\\
+&=\frac{1}{\alpha}\left( \sqrt{\frac{n}{2}}x\psi _{n-1}+\sqrt{\frac{n+1}{2}}x\psi _{n+1} \right) 
+\\
+&=\frac{1}{\alpha}\left[ \sqrt{\frac{n}{2}}\frac{1}{\alpha}\left( \sqrt{\frac{n-1}{2}}\psi _{n-2}+\sqrt{\frac{n}{2}}\psi _n \right) +\sqrt{\frac{n+1}{2}}\frac{1}{\alpha}\left( \sqrt{\frac{n+1}{2}}\psi _n+\sqrt{\frac{n+2}{2}}\psi _{n+2} \right) \right] 
+\\
+&=\frac{1}{\alpha ^2}\left[ \frac{\sqrt{n\left( n-1 \right)}}{2}\psi _{n-2}+\frac{n}{2}\psi _n+\frac{n+1}{2}\psi _n+\frac{\sqrt{\left( n+1 \right) \left( n+2 \right)}}{2}\psi _{n+2} \right] 
+\\
+&=\frac{1}{2\alpha ^2}\left[ \sqrt{n\left( n-1 \right)}\psi _{n-2}+\left( 2n+1 \right) \psi _n+\sqrt{\left( n+1 \right) \left( n+2 \right)}\psi _{n+2} \right] 
+    \end{aligned}
+\end{equation}
+以及
+\begin{equation}
+    \begin{aligned}
+        \frac{\mathrm{d}^2\psi _n}{\mathrm{d}x^2}&=\frac{\mathrm{d}}{\mathrm{d}x}\frac{\mathrm{d}\psi _n}{\mathrm{d}x}
+\\
+&=\frac{\mathrm{d}}{\mathrm{d}x}\left[ \alpha \left( \sqrt{\frac{n}{2}}\psi _{n-1}-\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) \right] 
+\\
+&=\alpha \left( \sqrt{\frac{n}{2}}\frac{\mathrm{d}\psi _{n-1}}{\mathrm{d}x}-\sqrt{\frac{n+1}{2}}\frac{\mathrm{d}\psi _{n+1}}{\mathrm{d}x} \right) 
+\\
+&=\alpha \left[ \sqrt{\frac{n}{2}}\alpha \left( \sqrt{\frac{n-1}{2}}\psi _{n-2}-\sqrt{\frac{n}{2}}\psi _n \right) -\sqrt{\frac{n+1}{2}}\alpha \left( \sqrt{\frac{n+1}{2}}\psi _n-\sqrt{\frac{n+2}{2}}\psi _{n+2} \right) \right] 
+\\
+&=\alpha ^2\left[ \frac{\sqrt{n\left( n-1 \right)}}{2}\psi _{n-2}-\frac{n}{2}\psi _n-\frac{n+1}{2}\psi _n+\frac{\sqrt{\left( n+1 \right) \left( n+2 \right)}}{2}\psi _{n+2} \right] 
+\\
+&=\frac{\alpha ^2}{2}\left[ \sqrt{n\left( n-1 \right)}\psi _{n-2}-\left( 2n+1 \right) \psi _n+\sqrt{\left( n+1 \right) \left( n+2 \right)}\psi _{n+2} \right] 
+    \end{aligned}
+\end{equation}
+2.计算期望值
+坐标
+\begin{equation}
+    \begin{aligned}
+        \bar{x}&=\int{\psi _{n}^{*}\hat{x}\psi _n\mathrm{d}x}
+\\
+&=\int{\psi _{n}^{*}x\psi _n\mathrm{d}x}
+\\
+&=\frac{1}{\alpha}\int{\psi _{n}^{*}\left( \sqrt{\frac{n}{2}}\psi _{n-1}+\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) \mathrm{d}x}
+\\
+&=\frac{1}{\alpha}\sqrt{\frac{n}{2}}\int{\psi _{n}^{*}\psi _{n-1}\mathrm{d}x}+\frac{1}{\alpha}\sqrt{\frac{n+1}{2}}\int{\psi _{n}^{*}\psi _{n+1}\mathrm{d}x}
+\\
+&=\frac{1}{\alpha}\sqrt{\frac{n}{2}}\cdot 0+\frac{1}{\alpha}\sqrt{\frac{n+1}{2}}\cdot 0
+\\
+&=0
+    \end{aligned}
+\end{equation}
+动量
+\begin{equation}
+    \begin{aligned}
+        \bar{p}&=-\mathrm{i}\hbar \int{\psi _{n}^{*}\hat{p}\psi _n\mathrm{d}x}
+\\
+&=-\mathrm{i}\hbar \int{\psi _{n}^{*}\frac{\mathrm{d}\psi _n}{\mathrm{d}x}\mathrm{d}x}
+\\
+&=-\mathrm{i}\hbar \alpha \int{\psi _{n}^{*}\left( \sqrt{\frac{n}{2}}\psi _{n-1}-\sqrt{\frac{n+1}{2}}\psi _{n+1} \right) \mathrm{d}x}
+\\
+&=-\mathrm{i}\hbar \alpha \sqrt{\frac{n}{2}}\int{\psi _{n}^{*}\psi _{n-1}\mathrm{d}x}+\mathrm{i}\hbar \alpha \sqrt{\frac{n+1}{2}}\int{\psi _{n}^{*}\psi _{n+1}\mathrm{d}x}
+\\
+&=-\mathrm{i}\hbar \alpha \sqrt{\frac{n}{2}}\cdot 0+\mathrm{i}\hbar \alpha \sqrt{\frac{n+1}{2}}\cdot 0
+\\
+&=0
+    \end{aligned}
+\end{equation}
+2.2计算
+坐标
+\begin{equation}
+    \begin{aligned}
+        \overline{x^2}&=\int{\psi _{n}^{*}\hat{x}^2\psi _n\mathrm{d}x}
+\\
+&=\int{\psi _{n}^{*}x^2\psi _n\mathrm{d}x}
+\\
+&=\frac{1}{2\alpha ^2}\int{\psi _{n}^{*}\left[ \sqrt{n\left( n-1 \right)}\psi _{n-2}+\left( 2n+1 \right) \psi _n+\sqrt{\left( n+1 \right) \left( n+2 \right)}\psi _{n+2} \right] \mathrm{d}x}
+\\
+&=\frac{1}{2\alpha ^2}\left[ \sqrt{n\left( n-1 \right)}\int{\psi _{n}^{*}\psi _{n-2}\mathrm{d}x}+\left( 2n+1 \right) \int{\psi _{n}^{*}\psi _n\mathrm{d}x}+\sqrt{\left( n+1 \right) \left( n+2 \right)}\int{\psi _{n}^{*}\psi _{n+2}\mathrm{d}x} \right] 
+\\
+&=\frac{1}{2\alpha ^2}\left[ \sqrt{n\left( n-1 \right)}\cdot 0+\left( 2n+1 \right) \cdot 1+\sqrt{\left( n+1 \right) \left( n+2 \right)}\cdot 0 \right] 
+\\
+&=\frac{1}{2\alpha ^2}\left( 2n+1 \right) 
+\\
+&=\frac{1}{\alpha ^2}\left( n+\frac{1}{2} \right) 
+    \end{aligned}
+\end{equation}
+动量
+\begin{equation}
+    \begin{aligned}
+        \overline{p^2}&=\int{\psi _{n}^{*}\hat{p}^2\psi _n\mathrm{d}x}
+\\
+&=-\hbar ^2\int{\psi _{n}^{*}\frac{\mathrm{d}^2\psi _n}{\mathrm{d}x^2}\mathrm{d}x}
+\\
+&=-\frac{\hbar ^2\alpha ^2}{2}\int{\psi _{n}^{*}\left[ \sqrt{n\left( n-1 \right)}\psi _{n-2}-\left( 2n+1 \right) \psi _n+\sqrt{\left( n+1 \right) \left( n+2 \right)}\psi _{n+2} \right] \mathrm{d}x}
+\\
+&=-\frac{\hbar ^2\alpha ^2}{2}\left[ \sqrt{n\left( n-1 \right)}\int{\psi _{n}^{*}\psi _{n-2}\mathrm{d}x}-\left( 2n+1 \right) \int{\psi _{n}^{*}\psi _n\mathrm{d}x}+\sqrt{\left( n+1 \right) \left( n+2 \right)}\int{\psi _{n}^{*}\psi _{n+2}\mathrm{d}x} \right] 
+\\
+&=-\frac{\hbar ^2\alpha ^2}{2}\left[ \sqrt{n\left( n-1 \right)}\cdot 0-\left( 2n+1 \right) \cdot 1+\sqrt{\left( n+1 \right) \left( n+2 \right)}\cdot 0 \right] 
+\\
+&=\frac{\hbar ^2\alpha ^2}{2}\left( 2n+1 \right) 
+\\
+&=\hbar ^2\alpha ^2\biggl( n+\frac{1}{2} \biggr) 
+    \end{aligned}
+\end{equation}
+3.由上面计算的结论
+\begin{equation}
+    \begin{aligned}
+        \bar{x}&=0\Rightarrow \bar{x}^2=0
+\\
+\bar{p}&=0\Rightarrow \bar{p}^2=0
+\\
+\overline{x^2}&=\frac{1}{\alpha ^2}\left( n+\frac{1}{2} \right) 
+\\
+\overline{p^2}&=\hbar ^2\alpha ^2\biggl( n+\frac{1}{2} \biggr) 
+    \end{aligned}
+\end{equation}
+计算方差
+\begin{equation}
+    \begin{aligned}
+        \Delta x&=\sqrt{\overline{x^2}-\bar{x}^2}=\frac{1}{\alpha}\sqrt{n+\frac{1}{2}}
+\\
+\Delta p&=\sqrt{\overline{p^2}-\bar{p}^2}=\hbar \alpha \sqrt{n+\frac{1}{2}}
+    \end{aligned}
+\end{equation}
+计算不确定关系
+\begin{equation}
+    \begin{aligned}
+        \Delta x\Delta p&=\frac{1}{\alpha}\sqrt{n+\frac{1}{2}}\cdot \hbar \alpha \sqrt{n+\frac{1}{2}}
+\\
+&=\left( n+\frac{1}{2} \right) \hbar 
+    \end{aligned}
+\end{equation}
 
 
 
 
+\newpage
 \subsection{2.21}
 $t = 0$ 时一维自由运动粒子的归一化波函数为
 $$\psi (x, 0) = (2\pi a^2)^{-1/4} \exp \left[ i k_0 (x - x_0) - \frac{(x - x_0)^2}{(2a)^2} \right]$$
