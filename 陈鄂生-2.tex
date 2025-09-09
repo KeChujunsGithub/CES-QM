@@ -552,8 +552,28 @@ $$\psi(0) = \frac{1}{2} \left( \sqrt{2}\psi_0 + \psi_1 + \psi_2 \right)$$
 \subsection{2.27}
 (1) 如厄米算符 $\hat{A}$ 对任何态矢量 $|u\rangle$，有 $\langle u|\hat{A}|u\rangle > 0$，则称 $\hat{A}$ 是正定算符。求证算符 $\hat{A} = |a\rangle \langle a|$ 是厄米正定算符。(2) 如 $\hat{A}$ 是任一线性算符，证明 $\hat{A}^{\dagger} \hat{A}$ 是厄米正定算符，它的迹等于 $\hat{A}$ 在任意表象中的矩阵元的模平方之和，试推导，当且仅当 $\hat{A} = 0$ 时，tr$(\hat{A}^{\dagger} \hat{A}) = 0$ 才成立。
 
+\newpage
 \subsection{2.28}
 设归一化波函数 $|\psi\rangle$ 满足薛定谔方程 $i \hbar \frac{\partial}{\partial t} |\psi\rangle = \hat{H} |\psi\rangle$。定义密度算符（矩阵）为 $\rho = |\psi\rangle \langle \psi|$。(1) 证明任意力学量 $\hat{F}$ 在 $|\psi\rangle$ 态中的平均值可表示为 tr$(\hat{F}\rho)$；(2) 求出 $\rho$ 的本征值；(3) 导出 $\rho$ 随时间变化的方程。
+
+\subsubsection{解答}
+(1)
+\begin{equation}
+    \begin{aligned}
+        \bar{F}&=\langle \psi |\hat{F}|\psi \rangle 
+\\
+&=\langle \psi |\left( \sum_n{|n\rangle \langle n|} \right) \hat{F}|\psi \rangle 
+\\
+&=\sum_n{\langle \psi |n\rangle \langle n|\hat{F}|\psi \rangle}
+\\
+&=\sum_n{\langle n|\hat{F}|\psi \rangle \langle \psi |n\rangle}
+\\
+&=\sum_n{\langle n|\hat{F}\rho |n\rangle}
+\\
+&=\mathrm{tr}\left( \hat{F}\rho \right) 
+    \end{aligned}
+\end{equation}
+
 
 \subsection{2.29}
 已知一量子体系，除了能量之外还包括另外三个可观察量 $\hat{P}, \hat{Q}$ 与 $\hat{R}$。设该体系只有两个能量本征态 $|1\rangle$ 与 $|2\rangle$，它们不一定是 $\hat{P}, \hat{Q}$ 与 $\hat{R}$ 的本征态。基于以下各组“实验数据”，尽可能多地定出 $\hat{P}, \hat{Q}$ 与 $\hat{R}$ 的本征值（有一组数据是非物理的）：
@@ -621,7 +641,7 @@ $$\psi(0) = \frac{1}{2} \left( \sqrt{2}\psi_0 + \psi_1 + \psi_2 \right)$$
 
 
 
-\subsubsection{解答2:利用}
+\subsubsection{解答2:利用求和指标}
 
 
 
@@ -631,10 +651,273 @@ $$\psi(0) = \frac{1}{2} \left( \sqrt{2}\psi_0 + \psi_1 + \psi_2 \right)$$
 \subsection{2.32}
 定义角动量升降算符 $\hat{J}_{\pm} = \hat{J}_x \pm i \hat{J}_y$，(1) 证明算符 $\hat{J}_+ \hat{J}_- $ 与 $\hat{J}_- \hat{J}_+ $ 的厄米性，并求出它们的本征态与本征值；(2) 若力学量算符 $\hat{F}$ 满足对易关系 $[\hat{F}, \hat{J}_{\mu}] = 0, \mu = x, y, z$，试证明 $\hat{F}$ 在 $\hat{J}^2, \hat{J}_z$ 共同本征态上的平均值与磁量子数无关。
 
+
+\subsubsection{解答：第一问}
+(1)
+角动量算符是厄米算符
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_{x}^{\dagger}&=\hat{J}_x
+\\
+\hat{J}_{y}^{\dagger}&=\hat{J}_y
+    \end{aligned}
+\end{equation}
+新定义的
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_+&=\hat{J}_x+\mathrm{i}\hat{J}_y
+\\
+\hat{J}_-&=\hat{J}_x-\mathrm{i}\hat{J}_y
+    \end{aligned}
+\end{equation}
+计算厄米共轭
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_{+}^{\dagger}&=\left( \hat{J}_x+\mathrm{i}\hat{J}_y \right) ^{\dagger}
+\\
+&=\hat{J}_{x}^{\dagger}-\mathrm{i}\hat{J}_{y}^{\dagger}
+\\
+&=\hat{J}_x-\mathrm{i}\hat{J}_y
+\\
+&=\hat{J}_-
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_{-}^{\dagger}&=\left( \hat{J}_x-\mathrm{i}\hat{J}_y \right) ^{\dagger}
+\\
+&=\hat{J}_{x}^{\dagger}+\mathrm{i}\hat{J}_{y}^{\dagger}
+\\
+&=\hat{J}_x+\mathrm{i}\hat{J}_y
+\\
+&=\hat{J}_+
+    \end{aligned}
+\end{equation}
+利用结论
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_{+}^{\dagger}&=\hat{J}_-
+\\
+\hat{J}_{-}^{\dagger}&=\hat{J}_+
+    \end{aligned}
+\end{equation}
+计算
+\begin{equation}
+    \left( \hat{J}_+\hat{J}_- \right) ^{\dagger}=\hat{J}_{-}^{\dagger}\hat{J}_{+}^{\dagger}=\hat{J}_+\hat{J}_-
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \left( \hat{J}_-\hat{J}_+ \right) ^{\dagger}=\hat{J}_{+}^{\dagger}\hat{J}_{-}^{\dagger}=\hat{J}_-\hat{J}_+
+    \end{aligned}
+\end{equation}
+得到
+\begin{equation}
+    \begin{aligned}
+        \left( \hat{J}_+\hat{J}_- \right) ^{\dagger}=\hat{J}_+\hat{J}_-
+\\
+\left( \hat{J}_-\hat{J}_+ \right) ^{\dagger}=\hat{J}_-\hat{J}_+
+    \end{aligned}
+\end{equation}
+即是厄米算符.
+
+第二小问
+由
+\begin{equation}
+    \hat{J}^2=\hat{J}_{x}^{2}+\hat{J}_{y}^{2}+\hat{J}_{z}^{2}
+\end{equation}
+得到
+\begin{equation}
+    \hat{J}_{x}^{2}+\hat{J}_{y}^{2}=\hat{J}^2-\hat{J}_{z}^{2}
+\end{equation}
+且
+\begin{equation}
+    [\hat{J}_x,\hat{J}_y]=\mathrm{i}\hbar \hat{J}_z
+\end{equation}
+
+计算
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_+\hat{J}_-&=(\hat{J}_x+\mathrm{i}\hat{J}_y)(\hat{J}_x-\mathrm{i}\hat{J}_y)
+\\
+&=\hat{J}_{x}^{2}-\mathrm{i}\hat{J}_x\hat{J}_y+\mathrm{i}\hat{J}_y\hat{J}_x+\hat{J}_{y}^{2}
+\\
+&=\hat{J}_{x}^{2}+\hat{J}_{y}^{2}-\mathrm{i(}\hat{J}_x\hat{J}_y-\hat{J}_y\hat{J}_x)
+\\
+&=\hat{J}_{x}^{2}+\hat{J}_{y}^{2}-\mathrm{i[}\hat{J}_x,\hat{J}_y]
+\\
+&=\hat{J}^2-\hat{J}_{z}^{2}+\hbar \hat{J}_z
+\\
+&=\hat{J}^2-\hat{J}_z(\hat{J}_z-\hbar )
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_-\hat{J}_+&=(\hat{J}_x-\mathrm{i}\hat{J}_y)(\hat{J}_x+\mathrm{i}\hat{J}_y)
+\\
+&=\hat{J}_{x}^{2}+\mathrm{i}\hat{J}_x\hat{J}_y-\mathrm{i}\hat{J}_y\hat{J}_x+\hat{J}_{y}^{2}
+\\
+&=\hat{J}_{x}^{2}+\hat{J}_{y}^{2}+\mathrm{i(}\hat{J}_x\hat{J}_y-\hat{J}_y\hat{J}_x)
+\\
+&=\hat{J}_{x}^{2}+\hat{J}_{y}^{2}+\mathrm{i[}\hat{J}_x,\hat{J}_y]
+\\
+&=\hat{J}^2-\hat{J}_{z}^{2}-\hbar \hat{J}_z
+\\
+&=\hat{J}^2-\hat{J}_z(\hat{J}_z+\hbar )
+    \end{aligned}
+\end{equation}
+利用本征方程
+\begin{equation}
+    \begin{aligned}
+        \hat{J}^2|jm\rangle &=j\left( j+1 \right) \hbar ^2|jm\rangle 
+\\
+\hat{J}_z|jm\rangle &=m\hbar |jm\rangle 
+    \end{aligned}
+\end{equation}
+计算
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_+\hat{J}_-|jm\rangle &=[\hat{J}^2-\hat{J}_z(\hat{J}_z-\hbar )]|jm\rangle 
+\\
+&=\hat{J}^2|jm\rangle -\hat{J}_{z}^{2}|jm\rangle +\hbar \hat{J}_z|jm\rangle 
+\\
+&=j\left( j+1 \right) |jm\rangle -m^2\hbar ^2|jm\rangle +m\hbar ^2|jm\rangle 
+\\
+&=\left[ j\left( j+1 \right) -m\left( m-1 \right) \right] \hbar ^2
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_-\hat{J}_+|jm\rangle &=[\hat{J}^2-\hat{J}_z(\hat{J}_z+\hbar )]|jm\rangle 
+\\
+&=\hat{J}^2|jm\rangle -\hat{J}_{z}^{2}|jm\rangle -\hbar \hat{J}_z|jm\rangle 
+\\
+&=j\left( j+1 \right) \hbar ^2|jm\rangle -m^2\hbar ^2|jm\rangle -m\hbar ^2|jm\rangle 
+\\
+&=\left[ j\left( j+1 \right) -m\left( m+1 \right) \right] \hbar ^2|jm\rangle 
+    \end{aligned}
+\end{equation}
+得到本征方程
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_+\hat{J}_-|jm\rangle &=\left[ j\left( j+1 \right) -m\left( m-1 \right) \right] \hbar ^2|jm\rangle 
+\\
+\hat{J}_-\hat{J}_+|jm\rangle &=\left[ j\left( j+1 \right) -m\left( m+1 \right) \right] \hbar ^2|jm\rangle 
+    \end{aligned}
+\end{equation}
+
+\subsubsection{解答：第二问}
+
+
+\newpage
 \subsection{2.33}
 证明力学量 $\hat{A}$(不显含t)的平均值对时间的二次微商为
-$$\frac{d^2\overline{A}}{dt^2} = -\frac{1}{\hbar^2} \left\langle \left[ \hat{A}, \hat{H} \right], \hat{H} \right\rangle$$
+
+$$\frac{\mathrm{d}^2\bar{A}}{\mathrm{d}t^2}=-\frac{1}{\hbar ^2}\langle [\hat{A},\hat{H}],\hat{H}\rangle $$
 其中 $\hat{H}$ 为该体系的哈密顿量。
+
+
+$$\frac{d^2\overline{A}}{dt^2} = -\frac{1}{\hbar^2} \left\langle \left[ \hat{A}, \hat{H} \right], \hat{H} \right\rangle$$
+
+\subsubsection{解答}
+
+不含时间
+\begin{equation}
+    \frac{\partial \hat{A}}{\partial t}=0
+\end{equation}
+得到
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial}{\partial t}[\hat{A},\hat{H}]&=0
+\\
+\frac{\partial}{\partial t}[[\hat{A},\hat{H}],\hat{H}]&=0
+\\
+&\vdots 
+    \end{aligned}
+\end{equation}
+薛定谔方程
+\begin{equation}
+    \begin{aligned}
+        i\hbar \frac{\partial |\psi \rangle}{\partial t}&=\hat{H}|\psi \rangle \Rightarrow \frac{\partial |\psi \rangle}{\partial t}=\frac{1}{i\hbar}\hat{H}|\psi \rangle 
+\\
+-i\hbar \frac{\partial \langle \psi |}{\partial t}&=\langle \psi |\hat{H}\Rightarrow \frac{\partial \langle \psi |}{\partial t}=-\frac{1}{i\hbar}\langle \psi |\hat{H}
+    \end{aligned}
+\end{equation}
+
+\begin{equation}
+    \bar{A}=\langle \hat{A}\rangle =\langle \psi |\hat{A}|\psi \rangle 
+\end{equation}
+
+1.
+\begin{equation}
+    \begin{aligned}
+        \frac{\mathrm{d}\bar{A}}{\mathrm{d}t}&=\frac{\mathrm{d}}{\mathrm{d}t}\langle \hat{A}\rangle 
+\\
+&=\frac{\mathrm{d}}{\mathrm{d}t}\langle \psi |\hat{A}|\psi \rangle 
+\\
+&=\left( \frac{\partial \langle \psi |}{\partial t} \right) \hat{A}|\psi \rangle +\langle \psi |\hat{A}\left( \frac{\partial |\psi \rangle}{\partial t} \right) 
+\\
+&=\left( -\frac{1}{i\hbar}\langle \psi |\hat{H} \right) \hat{A}|\psi \rangle +\langle \psi |\hat{A}\left( \frac{1}{i\hbar}\hat{H}|\psi \rangle \right) 
+\\
+&=-\frac{1}{i\hbar}\left\{ \langle \psi |\hat{H}\hat{A}|\psi \rangle +\langle \psi |\hat{A}\hat{H}|\psi \rangle \right\} 
+\\
+&=\frac{1}{i\hbar}\langle \psi |\left( \hat{A}\hat{H}-\hat{H}\hat{A} \right) |\psi \rangle 
+\\
+&=\frac{1}{i\hbar}\langle \psi |[\hat{A},\hat{H}]|\psi \rangle 
+\\
+&=\frac{1}{i\hbar}\langle [\hat{A},\hat{H}]\rangle 
+    \end{aligned}
+\end{equation}
+
+
+2.
+\begin{equation}
+    \begin{aligned}
+        \frac{\mathrm{d}^2\bar{A}}{\mathrm{d}t^2}&=\frac{\mathrm{d}}{\mathrm{d}t}\frac{\mathrm{d}\bar{A}}{\mathrm{d}t}
+\\
+&=\frac{\mathrm{d}}{\mathrm{d}t}\left( \frac{1}{i\hbar}\langle [\hat{A},\hat{H}]\rangle \right) 
+\\
+&=\frac{1}{i\hbar}\frac{\mathrm{d}}{\mathrm{d}t}\langle \psi |[\hat{A},\hat{H}]|\psi \rangle 
+\\
+&=\frac{1}{i\hbar}\left\{ \left( \frac{\partial \langle \psi |}{\partial t} \right) [\hat{A},\hat{H}]|\psi \rangle +\langle \psi |[\hat{A},\hat{H}]\left( \frac{\partial |\psi \rangle}{\partial t} \right) \right\} 
+\\
+&=\frac{1}{i\hbar}\left\{ \left( -\frac{1}{i\hbar}\langle \psi |\hat{H} \right) [\hat{A},\hat{H}]|\psi \rangle +\langle \psi |[\hat{A},\hat{H}]\left( \frac{1}{i\hbar}\hat{H}|\psi \rangle \right) \right\} 
+\\
+&=-\frac{1}{\hbar ^2}\left\{ \langle \psi |[\hat{A},\hat{H}]\hat{H}|\psi \rangle -\langle \psi |\hat{H}[\hat{A},\hat{H}]|\psi \rangle \right\} 
+\\
+&=-\frac{1}{\hbar ^2}\left\{ \langle \psi |\left( [\hat{A},\hat{H}]\hat{H}-\hat{H}[\hat{A},\hat{H}] \right) |\psi \rangle \right\} 
+\\
+&=-\frac{1}{\hbar ^2}\langle \psi |[[\hat{A},\hat{H}],\hat{H}]|\psi \rangle 
+\\
+&=-\frac{1}{\hbar ^2}\langle [[\hat{A},\hat{H}],\hat{H}]\rangle 
+    \end{aligned}
+\end{equation}
+3.
+\begin{equation}
+    \begin{aligned}
+        \frac{\mathrm{d}^3\bar{A}}{\mathrm{d}t^3}&=\frac{\mathrm{d}}{\mathrm{d}t}\frac{\mathrm{d}^2\bar{A}}{\mathrm{d}t^2}
+\\
+&=\frac{\mathrm{d}}{\mathrm{d}t}\left( -\frac{1}{\hbar ^2}\langle [[\hat{A},\hat{H}],\hat{H}]\rangle \right) 
+\\
+&=-\frac{1}{\hbar ^2}\frac{\mathrm{d}}{\mathrm{d}t}\langle \psi |[[\hat{A},\hat{H}],\hat{H}]|\psi \rangle 
+\\
+&=-\frac{1}{\hbar ^2}\left\{ \left( \frac{\partial \langle \psi |}{\partial t} \right) [[\hat{A},\hat{H}],\hat{H}]|\psi \rangle +\langle \psi |[[\hat{A},\hat{H}],\hat{H}]\left( \frac{\partial |\psi \rangle}{\partial t} \right) \right\} 
+\\
+&=-\frac{1}{\hbar ^2}\left\{ \left( -\frac{1}{i\hbar}\langle \psi |\hat{H} \right) [[\hat{A},\hat{H}],\hat{H}]|\psi \rangle +\langle \psi |[[\hat{A},\hat{H}],\hat{H}]\left( \frac{1}{i\hbar}\hat{H}|\psi \rangle \right) \right\} 
+\\
+&=-\frac{1}{i\hbar ^3}\left\{ \langle \psi |[[\hat{A},\hat{H}],\hat{H}]\hat{H}|\psi \rangle -\langle \psi |\hat{H}[[\hat{A},\hat{H}],\hat{H}]|\psi \rangle \right\} 
+\\
+&=-\frac{1}{i\hbar ^3}\left\{ \langle \psi |\left( [[\hat{A},\hat{H}],\hat{H}]\hat{H}-\hat{H}[[\hat{A},\hat{H}],\hat{H}] \right) |\psi \rangle \right\} 
+\\
+&=-\frac{1}{i\hbar ^3}\langle \psi |[[[\hat{A},\hat{H}],\hat{H}],\hat{H}]|\psi \rangle 
+\\
+&=-\frac{1}{i\hbar ^3}\langle [[[\hat{A},\hat{H}],\hat{H}],\hat{H}]\rangle 
+    \end{aligned}
+\end{equation}
+
 
 \subsection{2.34}
 证明在一维束缚态问题中，位能在基态的平均值满足如下关系：
@@ -650,7 +933,7 @@ $$\langle V \rangle_0 = E_0 - \frac{m}{2\hbar^2} \sum_n (E_n - E_0)^2 |\langle n
 
 \subsection{2.37}
 设轨道角动量 $\hat{L}$ 在 $n$ 方向上的分量为
-$$\hat{L}_n = \hat{L} \cdot n = \hat{L}_x \sin \alpha \cos \beta + \hat{L}_y \sin \alpha \sin \beta + \hat{L}_z \cos \alpha$$
+$$\hat{L}_n=\hat{\boldsymbol{L}}\cdot \boldsymbol{n}=\hat{L}_x\sin \alpha \cos \beta +\hat{L}_y\sin \alpha \sin \beta +\hat{L}_z\cos \alpha $$
 其中 $\alpha, \beta$ 为已知的方位角。求在算符 $\hat{L}^2$ 与 $\hat{L}_z$ 的共同本征态 $| lm \rangle$ 上算符 $\hat{L}_n$ 和 $\hat{L}_n^2$ 的平均值。
 
 \subsection{2.38}
@@ -707,9 +990,7 @@ $$|\alpha\rangle = e^{\alpha a^+ - \alpha^* a} |0\rangle$$
 一维谐振子处于相干态 $|\alpha\rangle = e^{-|\alpha|^2/2} \sum_{n=0}^{\infty} \frac{\alpha^n}{\sqrt{n!}} |n\rangle$，其中 $|n\rangle$ 是谐振子哈密顿量 $\hat{H} = \frac{\hat{p}^2}{2\mu} + \frac{1}{2}\mu\omega^2 x^2$的本征态。谐振子相干态 $|\alpha\rangle$ 是谐振子算符
 $$a = \sqrt{\frac{\mu\omega}{2\hbar}} \left( x + \frac{i}{\mu\omega} \hat{p} \right)$$
 的本征值为 $\alpha$的本征态，满足归一化条件 $\langle \alpha | \alpha \rangle = 1$。(1)求能量平均值 $\overline{H}$；(2)求 $\Delta x$与$\Delta p$，表明在相干态上乘积 $\Delta x \Delta p$ 取测不准关系式 $\Delta x \Delta p > \hbar/2$中的最小值。
-
-解答
-
+\subsubsection{解答}
 由
 \begin{equation}
     \hat{a}=\sqrt{\frac{\mu \omega}{2\hbar}}\left( \hat{x}+\frac{\mathrm{i}}{\mu \omega}\hat{p} \right) ,\quad \hat{a}^{\dagger}=\sqrt{\frac{\mu \omega}{2\hbar}}\left( \hat{x}-\frac{\mathrm{i}}{\mu \omega}\hat{p} \right) 
@@ -725,15 +1006,15 @@ $$a = \sqrt{\frac{\mu\omega}{2\hbar}} \left( x + \frac{i}{\mu\omega} \hat{p} \ri
 2.计算期望值和平方的期望值
 \begin{equation}
     \begin{aligned}
-        \bar{x}=\sqrt{\frac{\hbar}{2\mu \omega}}\langle \alpha |\left( \hat{a}^{\dagger}+\hat{a} \right) |\alpha \rangle 
+        \bar{x}&=\sqrt{\frac{\hbar}{2\mu \omega}}\langle \alpha |\left( \hat{a}^{\dagger}+\hat{a} \right) |\alpha \rangle 
 \\
-=\sqrt{\frac{\hbar}{2\mu \omega}}\left( \langle \alpha |\hat{a}^{\dagger}|\alpha \rangle +\langle \alpha |\hat{a}|\alpha \rangle \right) 
+&=\sqrt{\frac{\hbar}{2\mu \omega}}\left( \langle \alpha |\hat{a}^{\dagger}|\alpha \rangle +\langle \alpha |\hat{a}|\alpha \rangle \right) 
 \\
-=\sqrt{\frac{\hbar}{2\mu \omega}}\left( \langle \alpha |\alpha ^*|\alpha \rangle +\langle \alpha |\alpha |\alpha \rangle \right) 
+&=\sqrt{\frac{\hbar}{2\mu \omega}}\left( \langle \alpha |\alpha ^*|\alpha \rangle +\langle \alpha |\alpha |\alpha \rangle \right) 
 \\
-=\sqrt{\frac{\hbar}{2\mu \omega}}\left( \alpha ^*\langle \alpha |\alpha \rangle +\alpha \langle \alpha |\alpha \rangle \right) 
+&=\sqrt{\frac{\hbar}{2\mu \omega}}\left( \alpha ^*\langle \alpha |\alpha \rangle +\alpha \langle \alpha |\alpha \rangle \right) 
 \\
-=\sqrt{\frac{\hbar}{2\mu \omega}}\left( \alpha ^*+\alpha \right) 
+&=\sqrt{\frac{\hbar}{2\mu \omega}}\left( \alpha ^*+\alpha \right) 
     \end{aligned}
 \end{equation}
 和
