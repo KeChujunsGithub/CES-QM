@@ -929,13 +929,160 @@ $$\langle V \rangle_0 = E_0 - \frac{m}{2\hbar^2} \sum_n (E_n - E_0)^2 |\langle n
 
 \subsection{2.36}
 设体系的能量本征方程为 $\hat{H} | n \rangle = E_n | n \rangle, \langle m | n \rangle = \delta_{mn}, \quad E_0 < E_1 < E_2 \cdots$。
-(1) 取 $| \psi_0 \rangle$ 为归一化基态试探态矢。令 $E = \langle \psi_0 | \hat{H} | \psi_0 \rangle, \quad \varepsilon = 1 - | \langle 0 | \psi_0 \rangle |^2$，证明 $E - E_0 > (E_1 - E_0) \varepsilon$。(2) 若只知 $\hat{H}$ 最低的两个本征态矢 $| 0 \rangle$ 与 $| 1 \rangle$，试从任意归一化态矢出发，构造第二激发态的试探态矢，并求出该激发态能量上限。
+(1) 取 $| \psi_0 \rangle$ 为归一化基态试探态矢。令 $E = \langle \psi_0 | \hat{H} | \psi_0 \rangle, \quad \varepsilon = 1 - | \langle 0 | \psi_0 \rangle |^2$，证明 $E - E_0 \geqslant  (E_1 - E_0) \varepsilon$。
+(2) 若只知 $\hat{H}$ 最低的两个本征态矢 $| 0 \rangle$ 与 $| 1 \rangle$，试从任意归一化态矢出发，构造第二激发态的试探态矢，并求出该激发态能量上限。
 
+\newpage
 \subsection{2.37}
 设轨道角动量 $\hat{L}$ 在 $n$ 方向上的分量为
 $$\hat{L}_n=\hat{\boldsymbol{L}}\cdot \boldsymbol{n}=\hat{L}_x\sin \alpha \cos \beta +\hat{L}_y\sin \alpha \sin \beta +\hat{L}_z\cos \alpha $$
 其中 $\alpha, \beta$ 为已知的方位角。求在算符 $\hat{L}^2$ 与 $\hat{L}_z$ 的共同本征态 $| lm \rangle$ 上算符 $\hat{L}_n$ 和 $\hat{L}_n^2$ 的平均值。
 
+\subsubsection{解答}
+
+1.
+\begin{equation}
+    \hat{\boldsymbol{L}}=\hat{L}_x\boldsymbol{i}+\hat{L}_y\boldsymbol{j}+\hat{L}_z\boldsymbol{k}
+\end{equation}
+任意方向的单位矢量
+\begin{equation}
+    \boldsymbol{n}=\sin \theta \cos \varphi \boldsymbol{i}+\sin \theta \sin \varphi \boldsymbol{j}+\cos \theta \boldsymbol{k}
+\end{equation}
+得到
+\begin{equation}
+    \hat{\boldsymbol{L}}\cdot \boldsymbol{n}=\hat{L}_x\sin \theta \cos \varphi +\hat{L}_y\sin \theta \sin \varphi +\hat{L}_z\cos \theta 
+\end{equation}
+2.
+\begin{equation}
+    \hat{L}_x=\frac{\hat{L}_++\hat{L}_-}{2},\quad \hat{L}_y=\frac{\hat{L}_+-\hat{L}_-}{2\mathrm{i}}
+\end{equation}
+3.方程
+\begin{equation}
+    \begin{aligned}
+        \hat{L}_+|lm\rangle &=\hbar \sqrt{l\left( l+1 \right) -m\left( m+1 \right)}|l,m+1\rangle 
+\\
+\hat{L}_-|lm\rangle &=\hbar \sqrt{l\left( l+1 \right) -m\left( m-1 \right)}|l,m-1\rangle 
+\\
+\hat{L}_z|lm\rangle &=\hbar m|lm\rangle 
+    \end{aligned}
+\end{equation}
+4.
+\begin{equation}
+    \begin{aligned}
+        \hat{L}_n&=\hat{\boldsymbol{L}}\cdot \boldsymbol{n}
+\\
+&=\sin \alpha \cos \beta \hat{L}_x+\sin \alpha \sin \beta \hat{L}_y+\cos \alpha \hat{L}_z
+\\
+&=\sin \alpha \cos \beta \frac{\hat{L}_++\hat{L}_-}{2}+\sin \alpha \sin \beta \frac{\hat{L}_+-\hat{L}_-}{2\mathrm{i}}+\cos \alpha \hat{L}_z
+\\
+&=\frac{1}{2}\sin \alpha \left[ \cos \beta \left( \hat{L}_++\hat{L}_- \right) +\frac{1}{\mathrm{i}}\sin \beta \left( \hat{L}_+-\hat{L}_- \right) \right] +\cos \alpha \hat{L}_z
+\\
+&=\frac{1}{2}\sin \alpha \left[ \cos \beta \left( \hat{L}_++\hat{L}_- \right) -\mathrm{i}\sin \beta \left( \hat{L}_+-\hat{L}_- \right) \right] +\cos \alpha \hat{L}_z
+\\
+&=\frac{1}{2}\sin \alpha \left( \cos \beta \hat{L}_++\cos \beta \hat{L}_--\mathrm{i}\sin \beta \hat{L}_++i\sin \beta \hat{L}_- \right) +\cos \alpha \hat{L}_z
+\\
+&=\frac{1}{2}\sin \alpha \left( \cos \beta \hat{L}_+-\mathrm{i}\sin \beta \hat{L}_++\cos \beta \hat{L}_-+i\sin \beta \hat{L}_- \right) +\cos \alpha \hat{L}_z
+\\
+&=\frac{1}{2}\sin \alpha \left[ \left( \cos \beta -\mathrm{i}\sin \beta \right) \hat{L}_++\left( \cos \beta +\mathrm{i}\sin \beta \right) \hat{L}_- \right] +\cos \alpha \hat{L}_z
+\\
+&=\frac{1}{2}\sin \alpha \left( e^{-\mathrm{i}\beta}\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_- \right) +\cos \alpha \hat{L}_z
+    \end{aligned}
+\end{equation}
+5.
+\begin{equation}
+    \begin{aligned}
+        \langle \hat{L}_n\rangle &=\langle lm|\hat{L}_n|lm\rangle 
+        \\
+&=\langle lm|\left[ \frac{1}{2}\sin \alpha \left( e^{-i\beta}\hat{L}_++e^{i\beta}\hat{L}_- \right) +\cos \alpha \hat{L}_z \right] |lm\rangle 
+\\
+&=\frac{1}{2}\sin \alpha \left( e^{-i\beta}\langle lm|\hat{L}_+|lm\rangle +e^{i\beta}\langle lm|\hat{L}_-|lm\rangle \right) +\cos \alpha \langle lm|\hat{L}_z|lm\rangle 
+\\
+&=\frac{1}{2}\sin \alpha \left( e^{-i\beta}\langle lm|\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar |l,m+1\rangle +e^{i\beta}\langle lm|\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar |l,m-1\rangle \right) +\cos \alpha \langle lm|m\hbar |lm\rangle 
+\\
+&=\frac{1}{2}\sin \alpha \left( e^{-i\beta}\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \langle lm|l,m+1\rangle +e^{i\beta}\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \langle lm|l,m-1\rangle \right) +\cos \alpha m\hbar \langle lm|lm\rangle 
+\\
+&=\frac{1}{2}\sin \alpha \left( e^{-i\beta}\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \delta _{ll}\delta _{m,m+1}+e^{i\beta}\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \delta _{ll}\delta _{m,m-1} \right) +\cos \alpha m\hbar \delta _{ll}\delta _{mm}
+\\
+&=\frac{1}{2}\sin \alpha \left( e^{-i\beta}\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \cdot 0+e^{i\beta}\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \cdot 0 \right) +\cos \alpha m\hbar \cdot 1
+\\
+&=m\hbar \cos \alpha 
+    \end{aligned}
+\end{equation}
+
+6.
+计算
+\begin{equation}
+    \begin{aligned}
+        \hat{L}_{n}^{2}&=\left[ \frac{1}{2}\sin \alpha \left( e^{-\mathrm{i}\beta}\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_- \right) +\cos \alpha \hat{L}_z \right] \left[ \frac{1}{2}\sin \alpha \left( e^{-\mathrm{i}\beta}\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_- \right) +\cos \alpha \hat{L}_z \right] 
+\\
+&=\frac{1}{4}\sin ^2\alpha \left( e^{-\mathrm{i}\beta}\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_- \right) \left( e^{-\mathrm{i}\beta}\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_- \right) 
+\\
+&+\frac{1}{2}\cos \alpha \sin \alpha \left( e^{-\mathrm{i}\beta}\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_- \right) \hat{L}_z+\frac{1}{2}\sin \alpha \cos \alpha \hat{L}_z\left( e^{-\mathrm{i}\beta}\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_- \right) 
+\\
+&+\cos \alpha \hat{L}_z\cdot \cos \alpha \hat{L}_z
+\\
+&=\frac{1}{4}\sin ^2\alpha \left( e^{-\mathrm{i}\beta}\hat{L}_+e^{-\mathrm{i}\beta}\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_-e^{\mathrm{i}\beta}\hat{L}_-+e^{-\mathrm{i}\beta}\hat{L}_+e^{\mathrm{i}\beta}\hat{L}_-+e^{\mathrm{i}\beta}\hat{L}_-e^{-\mathrm{i}\beta}\hat{L}_+ \right) 
+\\
+&+\frac{1}{2}\cos \alpha \sin \alpha \left( e^{-\mathrm{i}\beta}\hat{L}_+\hat{L}_z+e^{\mathrm{i}\beta}\hat{L}_-\hat{L}_z+e^{-\mathrm{i}\beta}\hat{L}_z\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_z\hat{L}_- \right) 
+\\
+&+\cos ^2\alpha \hat{L}_{z}^{2}
+\\
+&=\frac{1}{4}\sin ^2\alpha \left( e^{-2i\beta}\hat{L}_{+}^{2}+e^{2i\beta}\hat{L}_{-}^{2}+\hat{L}_+\hat{L}_-+\hat{L}_-\hat{L}_+ \right) 
+\\
+&+\frac{1}{2}\sin \alpha \cos \alpha \left[ e^{-i\beta}\left( \hat{L}_+\hat{L}_z+\hat{L}_z\hat{L}_+ \right) +e^{i\beta}\left( \hat{L}_-\hat{L}_z+\hat{L}_z\hat{L}_- \right) \right] 
+\\
+&+\cos ^2\alpha \hat{L}_{z}^{2}
+    \end{aligned}
+\end{equation}
+计算
+\begin{equation}
+    \begin{aligned}
+        \langle \hat{L}_{n}^{2}\rangle &=\langle lm|\hat{L}_{n}^{2}|lm\rangle 
+\\
+&=\frac{1}{4}\sin ^2\alpha \left( e^{-2i\beta}\langle lm|\hat{L}_{+}^{2}|lm\rangle +e^{2i\beta}\langle lm|\hat{L}_{-}^{2}|lm\rangle +\langle lm|\hat{L}_+\hat{L}_-|lm\rangle +\langle lm|\hat{L}_-\hat{L}_+|lm\rangle \right) 
+\\
+&+\frac{1}{2}\sin \alpha \cos \alpha \left[ e^{-i\beta}\left( \langle lm|\hat{L}_+\hat{L}_z|lm\rangle +\langle lm|\hat{L}_z\hat{L}_+|lm\rangle \right) +e^{i\beta}\left( \langle lm|\hat{L}_-\hat{L}_z|lm\rangle +\langle lm|\hat{L}_z\hat{L}_-|lm\rangle \right) \right] 
+\\
+&+\cos ^2\alpha \langle lm|\hat{L}_{z}^{2}|lm\rangle 
+\\
+&=\frac{1}{4}\sin ^2\alpha \left( e^{-2i\beta}\cdot 0+e^{2i\beta}\cdot 0+\hbar ^2\left[ l\left( l+1 \right) -m\left( m-1 \right) \right] +\hbar ^2\left[ l\left( l+1 \right) -m\left( m+1 \right) \right] \right) 
+\\
+&+\frac{1}{2}\sin \alpha \cos \alpha \left[ e^{-i\beta}\left( 0+0 \right) +e^{i\beta}\left( 0+0 \right) \right] 
+\\
+&+\cos ^2\alpha \cdot m^2\hbar ^2
+\\
+&=\frac{1}{4}\sin ^2\alpha \left\{ \hbar ^2\left[ l\left( l+1 \right) -m\left( m-1 \right) \right] +\hbar ^2\left[ l\left( l+1 \right) -m\left( m+1 \right) \right] \right\} +m^2\hbar ^2\cos ^2\alpha 
+\\
+&=\frac{1}{4}\hbar ^2\sin ^2\alpha \left[ l\left( l+1 \right) -m^2 \right] +m^2\hbar ^2\cos ^2\alpha 
+    \end{aligned}
+\end{equation}
+其中
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_{+}^{2}|lm\rangle &=0
+\\
+\langle lm|\hat{L}_{-}^{2}|lm\rangle &=0
+\\
+\langle lm|\hat{L}_+\hat{L}_-|lm\rangle &=\hbar ^2\left[ l\left( l+1 \right) -m\left( m-1 \right) \right] 
+\\
+\langle lm|\hat{L}_-\hat{L}_+|lm\rangle &=\hbar ^2\left[ l\left( l+1 \right) -m\left( m+1 \right) \right] 
+\\
+\langle lm|\hat{L}_+\hat{L}_z|lm\rangle &=0
+\\
+\langle lm|\hat{L}_z\hat{L}_+|lm\rangle &=0
+\\
+\langle lm|\hat{L}_-\hat{L}_z|lm\rangle &=0
+\\
+\langle lm|\hat{L}_z\hat{L}_-|lm\rangle &=0
+\\
+\langle lm|\hat{L}_{z}^{2}|lm\rangle &=m^2\hbar ^2
+    \end{aligned}
+\end{equation}
+
+\subsubsection{解答2}
+
+
+\newpage
 \subsection{2.38}
 证明在 $\hat{H} = \frac{\hat{p}^2}{2\mu} + V(x)$ 的束缚定态 $\psi_n (x)$ 上，动量 $\hat{p}$ 与作用力 $\hat{F}$ 的平均值为0。
 
