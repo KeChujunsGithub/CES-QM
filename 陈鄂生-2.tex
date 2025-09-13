@@ -1464,13 +1464,112 @@ $$\frac{d^2\overline{A}}{dt^2} = -\frac{1}{\hbar^2} \left\langle \left[ \hat{A},
 \subsection{2.34}
 证明在一维束缚态问题中，位能在基态的平均值满足如下关系：
 $$\langle V \rangle_0 = E_0 - \frac{m}{2\hbar^2} \sum_n (E_n - E_0)^2 |\langle n| x | 0 \rangle|^2$$
+$$\langle V\rangle _0=E_0-\frac{m}{2\hbar ^2}\sum_n{\left( E_n-E_0 \right) ^2\left| \langle n|x|0\rangle \right|^2}$$
 再证明 $\langle V \rangle_0 \leq (5E_0 - E_1)/4, \quad E_0 \leq E_1 \leq E_2 \leq \cdots$
 
-\subsubsection{解答}
+\subsubsection{解答：方法一}
+1.根据2.6(2)
+\begin{equation}
+    \sum_n{\left( E_n-E_m \right) ^2}\left| \langle n|x|m\rangle \right|^2=\frac{\hbar ^2}{\mu ^2}\langle m|\hat{p}^2|m\rangle 
+\end{equation}
+计算
+\begin{equation}
+    \begin{aligned}
+        \sum_n{\left( E_n-E_k \right) ^2}\left| \langle n|x|k\rangle \right|^2&=\frac{\hbar ^2}{m^2}\langle k|\hat{p}^2|k\rangle 
+\\
+&=\frac{2\hbar ^2}{m}\langle k|\frac{\hat{p}^2}{2m}|k\rangle 
+\\
+&=\frac{2\hbar ^2}{m}\langle k|\hat{T}|k\rangle 
+\\
+&=\frac{2\hbar ^2}{m}\langle \hat{T}\rangle _k
+    \end{aligned}
+\end{equation}
+得到
+\begin{equation}
+    \langle \hat{T}\rangle _k=\frac{m}{2\hbar ^2}\sum_n{\left( E_n-E_k \right) ^2}\left| \langle n|x|k\rangle \right|^2
+\end{equation}
+2.因为
+\begin{equation}
+    \hat{H}=\hat{T}+\hat{V}
+\end{equation}
+且
+\begin{equation}
+    \hat{H}|k\rangle =E_k|k\rangle 
+\end{equation}
+得到
+\begin{equation}
+    \begin{aligned}
+        E_k &=\langle k|\hat{H}|k\rangle 
+\\
+&=\langle k|\left( \hat{T}+\hat{V} \right) |k\rangle 
+\\
+&=\langle k|\hat{T}|k\rangle +\langle k|\hat{V}|k\rangle 
+\\
+&=\langle \hat{T}\rangle _k+\langle \hat{V}\rangle _k
+    \end{aligned}
+\end{equation}
+即
+\begin{equation}
+    \langle \hat{T}\rangle _k=E_k-\langle \hat{V}\rangle _k
+\end{equation}
+3联立得到
+\begin{equation}
+    E_k-\langle \hat{V}\rangle _k=\frac{m}{2\hbar ^2}\sum_n{\left( E_n-E_k \right) ^2}\left| \langle n|x|k\rangle \right|^2
+\end{equation}
+即
+\begin{equation}
+    \langle \hat{V}\rangle _k=E_k-\frac{m}{2\hbar ^2}\sum_n{\left( E_n-E_k \right) ^2}\left| \langle n|x|k\rangle \right|^2
+\end{equation}
+
+第二小问
+1.由上一问
+\begin{equation}
+    \begin{aligned}
+        \langle \hat{V}\rangle _0&=E_0-\frac{m}{2\hbar ^2}\sum_n{\left( E_n-E_0 \right) ^2}\left| \langle n|x|0\rangle \right|^2
+\\
+&\leqslant E_0-\frac{m}{2\hbar ^2}\sum_n{\left( E_1-E_0 \right) \left( E_n-E_0 \right)}\left| \langle n|x|0\rangle \right|^2
+\\
+&=E_0-\frac{m\left( E_1-E_0 \right)}{2\hbar ^2}\sum_n{\left( E_n-E_0 \right)}\left| \langle n|x|0\rangle \right|^2
+    \end{aligned}
+\end{equation}
+2.根据
+\begin{equation}
+    \sum_n{\left( E_n-E_m \right) \left| \langle n|x|m\rangle \right|^2}=\frac{\hbar ^2}{2\mu}
+\end{equation}
+写出
+\begin{equation}
+    \begin{aligned}
+        \sum_n{\left( E_n-E_k \right) \left| \langle n|x|k\rangle \right|^2}=\frac{\hbar ^2}{2m}
+    \end{aligned}
+\end{equation}
+当k=0
+\begin{equation}
+    \sum_n{\left( E_n-E_0 \right) \left| \langle n|x|0\rangle \right|^2}=\frac{\hbar ^2}{2m}
+\end{equation}
+得到
+\begin{equation}
+    \begin{aligned}
+        \langle \hat{V}\rangle _0 &\leqslant E_0-\frac{m\left( E_1-E_0 \right)}{2\hbar ^2}\cdot \frac{\hbar ^2}{2m}
+\\
+&=E_0-\frac{1}{4}\left( E_1-E_0 \right) 
+\\
+&=\frac{1}{4}\left( 5E_0-E_1 \right) 
+    \end{aligned}
+\end{equation}
+
+
+
+根据2.6(2)
 
 
 
 
+\subsubsection{解答：方法二}
+
+
+
+
+\newpage
 \subsection{2.35}
 能量为 $E$ 的一束粒子穿过小孔，投射到距离小孔距离为 $L$ 的屏上。用不确定原理，证明通过不断减小孔径来达到减少屏上斑点直径是不可行的。估算使屏上斑点直径最小时小孔的直径。
 
