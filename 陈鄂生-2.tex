@@ -577,6 +577,217 @@ $$\psi(0) = \frac{1}{2} \left( \sqrt{2}\psi_0 + \psi_1 + \psi_2 \right)$$
 
 \subsubsection{解答1}
 
+1.定态
+\begin{equation}
+    \begin{aligned}
+        \psi (0)&=\frac{1}{2}\left( \sqrt{2}\psi _0+\psi _1+\psi _2 \right) 
+\\
+\psi (x,0)&=\frac{1}{2}\left( \sqrt{2}\psi _0(x)+\psi _1(x)+\psi _2(x) \right) 
+    \end{aligned}
+\end{equation}
+因为
+\begin{equation}
+    E_n=\left( n+\frac{1}{2} \right) 
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \psi (x,t)&=\mathrm{e}^{-\mathrm{i}E_nt}\psi (x,0)
+\\
+&=\frac{1}{2}\left( \sqrt{2}\mathrm{e}^{-\mathrm{i}E_0t}\psi _0(x)+\mathrm{e}^{-\mathrm{i}E_1t}\psi _1(x)+\mathrm{e}^{-\mathrm{i}E_2t}\psi _2(x) \right) 
+    \end{aligned}
+\end{equation}
+含时
+\begin{equation}
+    \begin{aligned}
+        \psi (t)&=\frac{1}{2}\left( \sqrt{2}\mathrm{e}^{-\mathrm{i}t/2}\psi _0+\mathrm{e}^{-\mathrm{i}3t/2}\psi _1+\mathrm{e}^{-\mathrm{i}5t/2}\psi _2 \right) 
+\\
+\psi (x,t)&=\frac{1}{2}\left( \sqrt{2}\mathrm{e}^{-\mathrm{i}t/2}\psi _0(x)+\mathrm{e}^{-\mathrm{i}3t/2}\psi _1(x)+\mathrm{e}^{-\mathrm{i}5t/2}\psi _2(x) \right) 
+    \end{aligned}
+\end{equation}
+2.由
+\begin{equation}
+    \psi (t)=\frac{1}{2}\left( \sqrt{2}\mathrm{e}^{-\mathrm{i}t/2}\psi _0+\mathrm{e}^{-\mathrm{i}3t/2}\psi _1+\mathrm{e}^{-\mathrm{i}5t/2}\psi _2 \right) 
+\end{equation}
+得到
+\begin{equation}
+    \psi ^*(t)=\frac{1}{2}\left( \sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\psi _{0}^{*}+\mathrm{e}^{\mathrm{i}3t/2}\psi _{1}^{*}+\mathrm{e}^{\mathrm{i}5t/2}\psi _{2}^{*} \right) 
+\end{equation}
+
+3.奇偶性
+由于
+\begin{equation}
+    \begin{aligned}
+        &x\text{奇函数}
+\\
+&\psi _0\text{偶函数},\psi _1\text{奇函数},\psi _2\text{偶函数}
+\\
+&\frac{\mathrm{d}\psi _0}{\mathrm{d}x}\text{奇函数},\frac{\mathrm{d}\psi _1}{\mathrm{d}x}\text{偶函数},\frac{\mathrm{d}\psi _2}{\mathrm{d}x}\text{奇函数}
+    \end{aligned}
+\end{equation}
+则以下都是奇函数
+\begin{equation}
+    \psi _{0}^{*}x\psi _0,\psi _{0}^{*}x\psi _2,\psi _{1}^{*}x\psi _1,\psi _{2}^{*}x\psi _0,\psi _{2}^{*}x\psi _2
+\end{equation}
+且
+\begin{equation}
+    \psi _{0}^{*}\frac{\mathrm{d}\psi _0}{\mathrm{d}x},\psi _{0}^{*}\frac{\mathrm{d}\psi _2}{\mathrm{d}x},\psi _{1}^{*}\frac{\mathrm{d}\psi _1}{\mathrm{d}x},\psi _{2}^{*}\frac{\mathrm{d}\psi _0}{\mathrm{d}x},\psi _{2}^{*}\frac{\mathrm{d}\psi _2}{\mathrm{d}x}
+\end{equation}
+
+4.计算坐标期望值
+\begin{equation}
+    \begin{aligned}
+        \overline{x(t)}&=\int{\psi ^*(t)x\psi (t)\mathrm{d}x}
+\\
+&=\frac{1}{4}\int{\left( \sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\psi _{0}^{*}+\mathrm{e}^{\mathrm{i}3t/2}\psi _{1}^{*}+\mathrm{e}^{\mathrm{i}5t/2}\psi _{2}^{*} \right) x\left( \sqrt{2}\mathrm{e}^{-\mathrm{i}t/2}\psi _0+\mathrm{e}^{-\mathrm{i}3t/2}\psi _1+\mathrm{e}^{-\mathrm{i}5t/2}\psi _2 \right) \mathrm{d}x}
+\\
+&=\frac{1}{4}\int{\left[ \begin{array}{c}
+	\sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\psi _{0}^{*}x\sqrt{2}\mathrm{e}^{-\mathrm{i}t/2}\psi _0+\sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\psi _{0}^{*}x\mathrm{e}^{-\mathrm{i}3t/2}\psi _1+\sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\psi _{0}^{*}x\mathrm{e}^{-\mathrm{i}5t/2}\psi _2\\
+	\mathrm{e}^{\mathrm{i}3t/2}\psi _{1}^{*}x\sqrt{2}\mathrm{e}^{-\mathrm{i}t/2}\psi _0+\mathrm{e}^{\mathrm{i}3t/2}\psi _{1}^{*}x\mathrm{e}^{-\mathrm{i}3t/2}\psi _1+\mathrm{e}^{\mathrm{i}3t/2}\psi _{1}^{*}x\mathrm{e}^{-\mathrm{i}5t/2}\psi _2\\
+	\mathrm{e}^{\mathrm{i}5t/2}\psi _{2}^{*}x\sqrt{2}\mathrm{e}^{-\mathrm{i}t/2}\psi _0+\mathrm{e}^{\mathrm{i}5t/2}\psi _{2}^{*}x\mathrm{e}^{-\mathrm{i}3t/2}\psi _1+\mathrm{e}^{\mathrm{i}5t/2}\psi _{2}^{*}x\mathrm{e}^{-\mathrm{i}5t/2}\psi _2\\
+\end{array} \right] \mathrm{d}x}
+\\
+&=\frac{1}{4}\int{\left[ \begin{array}{c}
+	2\mathrm{e}^{\mathrm{i}t/2}\mathrm{e}^{-\mathrm{i}t/2}\psi _{0}^{*}x\psi _0+\sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\mathrm{e}^{-\mathrm{i}3t/2}\psi _{0}^{*}x\psi _1+\sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\mathrm{e}^{-\mathrm{i}5t/2}\psi _{0}^{*}x\psi _2\\
+	\sqrt{2}\mathrm{e}^{\mathrm{i}3t/2}\mathrm{e}^{-\mathrm{i}t/2}\psi _{1}^{*}x\psi _0+\mathrm{e}^{\mathrm{i}3t/2}\mathrm{e}^{-\mathrm{i}3t/2}\psi _{1}^{*}x\psi _1+\mathrm{e}^{\mathrm{i}3t/2}\mathrm{e}^{-\mathrm{i}5t/2}\psi _{1}^{*}x\psi _2\\
+	\sqrt{2}\mathrm{e}^{\mathrm{i}5t/2}\mathrm{e}^{-\mathrm{i}t/2}\psi _{2}^{*}x\psi _0+\mathrm{e}^{\mathrm{i}5t/2}\mathrm{e}^{-\mathrm{i}3t/2}\psi _{2}^{*}x\psi _1+\mathrm{e}^{\mathrm{i}5t/2}\mathrm{e}^{-\mathrm{i}5t/2}\psi _{2}^{*}x\psi _2\\
+\end{array} \right] \mathrm{d}x}
+\\
+&=\frac{1}{4}\int{\left[ \begin{array}{c}
+	2{\color[RGB]{240, 0, 0} \psi _{0}^{*}x\psi _0}+\sqrt{2}\mathrm{e}^{-\mathrm{i}t}\psi _{0}^{*}x\psi _1+\sqrt{2}\mathrm{e}^{-2\mathrm{i}t}{\color[RGB]{240, 0, 0} \psi _{0}^{*}x\psi _2}\\
+	\sqrt{2}\mathrm{e}^{\mathrm{i}t}\psi _{1}^{*}x\psi _0+{\color[RGB]{240, 0, 0} \psi _{1}^{*}x\psi _1}+\mathrm{e}^{-\mathrm{i}t}\psi _{1}^{*}x\psi _2\\
+	\sqrt{2}\mathrm{e}^{2\mathrm{i}t}{\color[RGB]{240, 0, 0} \psi _{2}^{*}x\psi _0}+\mathrm{e}^{\mathrm{i}t}\psi _{2}^{*}x\psi _1+{\color[RGB]{240, 0, 0} \psi _{2}^{*}x\psi _2}\\
+\end{array} \right] \mathrm{d}x}
+    \end{aligned}
+\end{equation}
+4.2奇偶性
+\begin{equation}
+    \begin{aligned}
+        \int{\psi _{0}^{*}x\psi _0\mathrm{d}x}&=0
+\\
+\int{\psi _{0}^{*}x\psi _2\mathrm{d}x}&=0
+\\
+\int{\psi _{1}^{*}x\psi _1\mathrm{d}x}&=0
+\\
+\int{\psi _{2}^{*}x\psi _0\mathrm{d}x}&=0
+\\
+\int{\psi _{2}^{*}x\psi _2\mathrm{d}x}&=0
+    \end{aligned}
+\end{equation}
+化简
+\begin{equation}
+    \begin{aligned}
+        \overline{x(t)}=\frac{1}{4}\left( \sqrt{2}\mathrm{e}^{-\mathrm{i}t}\int{\psi _{0}^{*}x\psi _1\mathrm{d}x}+\sqrt{2}\mathrm{e}^{\mathrm{i}t}\int{\psi _{1}^{*}x\psi _0\mathrm{d}x}+\mathrm{e}^{-\mathrm{i}t}\int{\psi _{1}^{*}x\psi _2\mathrm{d}x}+\mathrm{e}^{\mathrm{i}t}\int{\psi _{2}^{*}x\psi _1\mathrm{d}x} \right) 
+    \end{aligned}
+\end{equation}
+4.3根据
+\begin{equation}
+    \begin{aligned}
+        x\psi _n=\sqrt{\frac{n+1}{2}}\psi _{n+1}+\sqrt{\frac{n}{2}}\psi _{n-1}
+    \end{aligned}
+\end{equation}
+得到
+\begin{equation}
+    \begin{aligned}
+        x\psi _0&=\sqrt{\frac{1}{2}}\psi _1
+\\
+x\psi _1&=\psi _2+\sqrt{\frac{1}{2}}\psi _0
+\\
+x\psi _2&=\sqrt{\frac{3}{2}}\psi _3+\psi _1
+    \end{aligned}
+\end{equation}
+
+
+\begin{equation}
+    \begin{aligned}
+        \overline{x(t)}&=\frac{1}{4}\left( \sqrt{2}\mathrm{e}^{-\mathrm{i}t}\cdot \frac{1}{\sqrt{2}}+\sqrt{2}\mathrm{e}^{\mathrm{i}t}\cdot \frac{1}{\sqrt{2}}+\mathrm{e}^{-\mathrm{i}t}\cdot 1+\mathrm{e}^{\mathrm{i}t}\cdot 1 \right) 
+\\
+&=\frac{1}{4}\left( \mathrm{e}^{-\mathrm{i}t}+\mathrm{e}^{\mathrm{i}t}+\mathrm{e}^{-\mathrm{i}t}+\mathrm{e}^{\mathrm{i}t} \right) 
+\\
+&=\frac{1}{2}\left( \mathrm{e}^{-\mathrm{i}t}+\mathrm{e}^{\mathrm{i}t} \right) 
+\\
+&=\cos t
+    \end{aligned}
+\end{equation}
+
+
+5.计算动量的期望值
+5.1计算
+\begin{equation}
+    \begin{aligned}
+        \overline{p(t)}&=-\mathrm{i}\int{\psi ^*(t)\frac{\mathrm{d}}{\mathrm{d}x}\psi (t)\mathrm{d}x}
+\\
+&=-\frac{\mathrm{i}}{4}\int{\left( \sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\psi _{0}^{*}+\mathrm{e}^{\mathrm{i}3t/2}\psi _{1}^{*}+\mathrm{e}^{\mathrm{i}5t/2}\psi _{2}^{*} \right) \frac{\mathrm{d}}{\mathrm{d}x}\left( \sqrt{2}\mathrm{e}^{-\mathrm{i}t/2}\psi _0+\mathrm{e}^{-\mathrm{i}3t/2}\psi _1+\mathrm{e}^{-\mathrm{i}5t/2}\psi _2 \right) \mathrm{d}x}
+\\
+&=-\frac{\mathrm{i}}{4}\int{\left[ \begin{array}{c}
+	\sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\psi _{0}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\sqrt{2}\mathrm{e}^{-\mathrm{i}t/2}\psi _0+\sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\psi _{0}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\mathrm{e}^{-\mathrm{i}3t/2}\psi _1+\sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\psi _{0}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\mathrm{e}^{-\mathrm{i}5t/2}\psi _2\\
+	\mathrm{e}^{\mathrm{i}3t/2}\psi _{1}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\sqrt{2}\mathrm{e}^{-\mathrm{i}t/2}\psi _0+\mathrm{e}^{\mathrm{i}3t/2}\psi _{1}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\mathrm{e}^{-\mathrm{i}3t/2}\psi _1+\mathrm{e}^{\mathrm{i}3t/2}\psi _{1}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\mathrm{e}^{-\mathrm{i}5t/2}\psi _2\\
+	\mathrm{e}^{\mathrm{i}5t/2}\psi _{2}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\sqrt{2}\mathrm{e}^{-\mathrm{i}t/2}\psi _0+\mathrm{e}^{\mathrm{i}5t/2}\psi _{2}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\mathrm{e}^{-\mathrm{i}3t/2}\psi _1+\mathrm{e}^{\mathrm{i}5t/2}\psi _{2}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\mathrm{e}^{-\mathrm{i}5t/2}\psi _2\\
+\end{array} \right] \mathrm{d}x}
+\\
+&=-\frac{\mathrm{i}}{4}\int{\left[ \begin{array}{c}
+	2\mathrm{e}^{\mathrm{i}t/2}\mathrm{e}^{-\mathrm{i}t/2}\psi _{0}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _0+\sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\mathrm{e}^{-\mathrm{i}3t/2}\psi _{0}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _1+\sqrt{2}\mathrm{e}^{\mathrm{i}t/2}\mathrm{e}^{-\mathrm{i}5t/2}\psi _{0}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _2\\
+	\mathrm{e}^{\mathrm{i}3t/2}\mathrm{e}^{-\mathrm{i}t/2}\psi _{1}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\sqrt{2}\psi _0+\mathrm{e}^{\mathrm{i}3t/2}\mathrm{e}^{-\mathrm{i}3t/2}\psi _{1}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _1+\mathrm{e}^{\mathrm{i}3t/2}\mathrm{e}^{-\mathrm{i}5t/2}\psi _{1}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _2\\
+	\sqrt{2}\mathrm{e}^{\mathrm{i}5t/2}\mathrm{e}^{-\mathrm{i}t/2}\psi _{2}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _0+\mathrm{e}^{\mathrm{i}5t/2}\mathrm{e}^{-\mathrm{i}3t/2}\psi _{2}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _1+\mathrm{e}^{\mathrm{i}5t/2}\mathrm{e}^{-\mathrm{i}5t/2}\psi _{2}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _2\\
+\end{array} \right] \mathrm{d}x}
+\\
+&=-\frac{\mathrm{i}}{4}\int{\left[ \begin{array}{c}
+	2{\color[RGB]{240, 0, 0} \psi _{0}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _0}+\sqrt{2}\mathrm{e}^{-\mathrm{i}t}\psi _{0}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _1+\sqrt{2}\mathrm{e}^{-2\mathrm{i}t}{\color[RGB]{240, 0, 0} \psi _{0}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _2}\\
+	\mathrm{e}^{\mathrm{i}t}\psi _{1}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\sqrt{2}\psi _0+{\color[RGB]{240, 0, 0} \psi _{1}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _1}+\mathrm{e}^{-\mathrm{i}t}\psi _{1}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _2\\
+	\sqrt{2}\mathrm{e}^{2\mathrm{i}t}{\color[RGB]{240, 0, 0} \psi _{2}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _0}+\mathrm{e}^{\mathrm{i}t}\psi _{2}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _1+{\color[RGB]{240, 0, 0} \psi _{2}^{*}\frac{\mathrm{d}}{\mathrm{d}x}\psi _2}\\
+\end{array} \right] \mathrm{d}x}
+    \end{aligned}
+\end{equation}
+5.2奇宇称
+\begin{equation}
+    \begin{aligned}
+        \int{\psi _{0}^{*}\frac{\mathrm{d}\psi _0}{\mathrm{d}x}\mathrm{d}x}&=0
+\\
+\int{\psi _{0}^{*}\frac{\mathrm{d}\psi _2}{\mathrm{d}x}\mathrm{d}x}&=0
+\\
+\int{\psi _{1}^{*}\frac{\mathrm{d}\psi _1}{\mathrm{d}x}\mathrm{d}x}&=0
+\\
+\int{\psi _{2}^{*}\frac{\mathrm{d}\psi _0}{\mathrm{d}x}\mathrm{d}x}&=0
+\\
+\int{\psi _{2}^{*}\frac{\mathrm{d}\psi _2}{\mathrm{d}x}\mathrm{d}x}&=0
+    \end{aligned}
+\end{equation}
+化简
+\begin{equation}
+    \overline{p(t)}=-\frac{\mathrm{i}}{4}\left( \sqrt{2}\mathrm{e}^{-\mathrm{i}t}\int{\psi _{0}^{*}\frac{\mathrm{d}\psi _1}{\mathrm{d}x}\mathrm{d}x}+\sqrt{2}\mathrm{e}^{\mathrm{i}t}\int{\psi _{1}^{*}\frac{\mathrm{d}\psi _0}{\mathrm{d}x}\mathrm{d}x+\mathrm{e}^{-\mathrm{i}t}\int{\psi _{1}^{*}\frac{\mathrm{d}\psi _2}{\mathrm{d}x}\mathrm{d}x}}+\mathrm{e}^{\mathrm{i}t}\int{\psi _{2}^{*}\frac{\mathrm{d}\psi _1}{\mathrm{d}x}\mathrm{d}x} \right) 
+\end{equation}
+5.3根据
+\begin{equation}
+    \frac{\mathrm{d}\psi _n}{\mathrm{d}x}=\sqrt{\frac{n}{2}}\psi _{n-1}-\sqrt{\frac{n+1}{2}}\psi _{n+1}
+\end{equation}
+得到
+\begin{equation}
+    \begin{aligned}
+        \frac{\mathrm{d}\psi _0}{\mathrm{d}x}&=-\sqrt{\frac{1}{2}}\psi _1
+\\
+\frac{\mathrm{d}\psi _1}{\mathrm{d}x}&=\sqrt{\frac{1}{2}}\psi _0-\psi _2
+\\
+\frac{\mathrm{d}\psi _2}{\mathrm{d}x}&=\psi _1-\sqrt{\frac{3}{2}}\psi _3
+    \end{aligned}
+\end{equation}
+计算
+\begin{equation}
+    \begin{aligned}
+        \overline{p(t)}&=-\frac{\mathrm{i}}{4}\left( \sqrt{2}\mathrm{e}^{-\mathrm{i}t}\cdot \frac{1}{\sqrt{2}}-\sqrt{2}\mathrm{e}^{\mathrm{i}t}\frac{1}{\sqrt{2}}+\mathrm{e}^{-\mathrm{i}t}\cdot 1-\mathrm{e}^{\mathrm{i}t}\cdot 1 \right) 
+\\
+&=-\frac{\mathrm{i}}{4}\left( \mathrm{e}^{-\mathrm{i}t}-\mathrm{e}^{\mathrm{i}t}+\mathrm{e}^{-\mathrm{i}t}-\mathrm{e}^{\mathrm{i}t} \right) 
+\\
+&=-\frac{\mathrm{i}}{2}\left( \mathrm{e}^{-\mathrm{i}t}-\mathrm{e}^{\mathrm{i}t} \right) 
+\\
+&=-\sin t
+    \end{aligned}
+\end{equation}
+
+
+还剩下还要补充
+
+
+
 \newpage
 \subsection{2.26}
 证明在宽度为 $a$ 的一维无限深方势阱中的定态能量 $E > \hbar^2 / 2 \mu a^2$。
