@@ -602,11 +602,74 @@ $$\psi(0) = \frac{1}{2} \left( \sqrt{2}\psi_0 + \psi_1 + \psi_2 \right)$$
 
 
 \subsubsection{解答2.1}
+本征方程
+\begin{equation}
+    \rho |\phi \rangle =\lambda |\phi \rangle 
+\end{equation}
+得到
+\begin{equation}
+    \rho ^2|\phi \rangle =\lambda ^2|\phi \rangle 
+\end{equation}
+由于
+\begin{equation}
+    \rho ^2=|\psi \rangle \langle \psi |\psi \rangle \langle \psi |=|\psi \rangle 1\langle \psi |=|\psi \rangle \langle \psi |=\rho 
+\end{equation}
+即可得到
+\begin{equation}
+    \rho |\phi \rangle =\rho ^2|\phi \rangle =\lambda ^2|\phi \rangle =\lambda |\phi \rangle 
+\end{equation}
+因此
+\begin{equation}
+    \lambda ^2=\lambda \Rightarrow \lambda =0,1
+\end{equation}
+拓展
+\begin{equation}
+    \begin{aligned}
+        \rho ^n &={\color[RGB]{0, 0, 240} |\psi \rangle \langle \psi |}\psi \rangle \langle \psi |\cdots |\psi \rangle \langle \psi |\psi \rangle \langle \psi |
+\\
+&=|\psi \rangle {\color[RGB]{240, 0, 0} \langle \psi |\psi \rangle }\langle \psi |\psi \rangle \cdots \langle \psi |\psi \rangle \langle \psi |
+\\
+&=|\psi \rangle \langle \psi |
+\\
+&=\rho 
+    \end{aligned}
+\end{equation}
 
 
-\subsubsection{解答2.2}
+\subsubsection{解答2.2，看deepseek老师的解答}
+
+
+
 
 \subsubsection{解答3}
+
+\begin{equation}
+    \begin{aligned}
+        \mathrm{i}\hbar \frac{\partial}{\partial t}|\psi \rangle &=\hat{H}|\psi \rangle \Rightarrow \frac{\partial}{\partial t}|\psi \rangle =\frac{1}{\mathrm{i}\hbar}\hat{H}|\psi \rangle 
+\\
+-\mathrm{i}\hbar \frac{\partial}{\partial t}\langle \psi |&=\langle \psi |\hat{H}\Rightarrow \frac{\partial}{\partial t}\langle \psi |=-\frac{1}{\mathrm{i}\hbar}\langle \psi |\hat{H}
+    \end{aligned}
+\end{equation}
+计算
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial \rho}{\partial t}&=\frac{\partial}{\partial t}\left( |\psi \rangle \langle \psi | \right) 
+\\
+&=\left( \frac{\partial}{\partial t}|\psi \rangle \right) \langle \psi |+|\psi \rangle \left( \frac{\partial}{\partial t}\langle \psi | \right) 
+\\
+&=\left( \frac{1}{\mathrm{i}\hbar}\hat{H}|\psi \rangle \right) \langle \psi |+|\psi \rangle \left( -\frac{1}{\mathrm{i}\hbar}\langle \psi |\hat{H} \right) 
+\\
+&=\frac{1}{\mathrm{i}\hbar}\left( \hat{H}|\psi \rangle \langle \psi |-|\psi \rangle \langle \psi |\hat{H} \right) 
+\\
+&=\frac{1}{\mathrm{i}\hbar}\left( \hat{H}\rho -\rho \hat{H} \right) 
+\\
+&=\frac{1}{\mathrm{i}\hbar}\left[ \hat{H},\rho \right] 
+    \end{aligned}
+\end{equation}
+得到
+\begin{equation}
+    \mathrm{i}\hbar \frac{\partial \rho}{\partial t}=\left[ \hat{H},\rho \right] 
+\end{equation}
 
 
 
