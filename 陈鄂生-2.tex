@@ -202,12 +202,12 @@
 \subsection{2.6}
 粒子作一维运动，$\hat{H} = \frac{\hat{p}^2}{2\mu} + V(x)$，定态波函数为 $|n\rangle : \hat{H}|n\rangle = E_n |n\rangle$，$n = 1, 2, \cdots$。
 \\(1) 证明
-$$\langle n | \hat{p} | m \rangle = a_{nm} \langle n | x | m \rangle \tag{1}$$
+$$\langle n | \hat{p} | m \rangle = a_{nm} \langle n | x | m \rangle $$
 并求系数 $a_{nm}$。
 \\(2) 利用式(1)推导求和公式
-$$\sum_n (E_n - E_m)^2 | \langle n | x | m \rangle |^2 = \frac{\hbar^2}{\mu^2} \langle m | p^2 | m \rangle \tag{2}$$
+$$\sum_n (E_n - E_m)^2 | \langle n | x | m \rangle |^2 = \frac{\hbar^2}{\mu^2} \langle m | p^2 | m \rangle $$
 \\(3) 证明
-$$\sum_n (E_n - E_m) | \langle n | x | m \rangle |^2 = \frac{\hbar^2}{2\mu} \tag{3}$$
+$$\sum_n (E_n - E_m) | \langle n | x | m \rangle |^2 = \frac{\hbar^2}{2\mu} $$
 
 \subsection{2.7}
 设 $\hat{F}$ 为厄米算符，证明在能量表象中下式成立：
@@ -1069,7 +1069,7 @@ x\psi _2&=\sqrt{\frac{3}{2}}\psi _3+\psi _1
 
 
 
-
+\newpage
 \subsection{2.32}
 定义角动量升降算符 $\hat{J}_{\pm} = \hat{J}_x \pm i \hat{J}_y$，(1) 证明算符 $\hat{J}_+ \hat{J}_- $ 与 $\hat{J}_- \hat{J}_+ $ 的厄米性，并求出它们的本征态与本征值；(2) 若力学量算符 $\hat{F}$ 满足对易关系 $[\hat{F}, \hat{J}_{\mu}] = 0, \mu = x, y, z$，试证明 $\hat{F}$ 在 $\hat{J}^2, \hat{J}_z$ 共同本征态上的平均值与磁量子数无关。
 
@@ -1231,7 +1231,127 @@ x\psi _2&=\sqrt{\frac{3}{2}}\psi _3+\psi _1
     \end{aligned}
 \end{equation}
 
+第二小问：方法二
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_+|jm\rangle &=\sqrt{j\left( j+1 \right) -m\left( m+1 \right)}\hbar |j,m+1\rangle 
+\\
+\hat{J}_-|jm\rangle &=\sqrt{j\left( j+1 \right) -m\left( m-1 \right)}\hbar |j,m-1\rangle 
+    \end{aligned}
+\end{equation}
+得到
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_-|j,m+1\rangle &=\sqrt{j\left( j+1 \right) -\left( m+1 \right) \left( \left( m+1 \right) -1 \right)}\hbar |j,m\rangle 
+\\
+&=\sqrt{j\left( j+1 \right) -m\left( m+1 \right)}\hbar |j,m\rangle 
+\\
+\hat{J}_+|j,m-1\rangle &=\sqrt{j\left( j+1 \right) -\left( m-1 \right) \left( \left( m-1 \right) +1 \right)}\hbar |j,m\rangle 
+\\
+&=\sqrt{j\left( j+1 \right) -m\left( m-1 \right)}\hbar |j,m\rangle 
+    \end{aligned}
+\end{equation}
+计算
+\begin{equation}
+    \begin{aligned}
+         \hat{J}_-\hat{J}_+|jm\rangle &=\hat{J}_-\cdot \sqrt{j\left( j+1 \right) -m\left( m+1 \right)}\hbar |j,m+1\rangle 
+\\
+&=\sqrt{j\left( j+1 \right) -m\left( m+1 \right)}\hbar \hat{J}_-|j,m+1\rangle 
+\\
+&=\sqrt{j\left( j+1 \right) -m\left( m+1 \right)}\hbar \cdot \sqrt{j\left( j+1 \right) -m\left( m+1 \right)}\hbar |j,m\rangle 
+\\
+&=\left[ j\left( j+1 \right) -m\left( m+1 \right) \right] \hbar ^2|jm\rangle 
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+         \hat{J}_+\hat{J}_-|jm\rangle &=\hat{J}_+\cdot \sqrt{j\left( j+1 \right) -m\left( m-1 \right)}\hbar |j,m-1\rangle 
+\\
+&=\sqrt{j\left( j+1 \right) -m\left( m-1 \right)}\hbar \hat{J}_+|j,m-1\rangle 
+\\
+&=\sqrt{j\left( j+1 \right) -m\left( m-1 \right)}\hbar \cdot \sqrt{j\left( j+1 \right) -m\left( m-1 \right)}\hbar |j,m\rangle 
+\\
+&=\left[ j\left( j+1 \right) -m\left( m-1 \right) \right] \hbar ^2|jm\rangle 
+    \end{aligned}
+\end{equation}
+
 \subsubsection{解答：第二问}
+上一问
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_-\hat{J}_+|jm\rangle =\left[ j\left( j+1 \right) -m\left( m+1 \right) \right] \hbar ^2|jm\rangle 
+\\
+\hat{J}_+\hat{J}_-|jm\rangle =\left[ j\left( j+1 \right) -m\left( m-1 \right) \right] \hbar ^2|jm\rangle 
+    \end{aligned}
+\end{equation}
+由
+\begin{equation}
+    \begin{aligned}
+        \hat{J}_+|jm\rangle =\sqrt{j\left( j+1 \right) -m\left( m+1 \right)}\hbar |j,m+1\rangle 
+\\
+\hat{J}_-|jm\rangle =\sqrt{j\left( j+1 \right) -m\left( m-1 \right)}\hbar |j,m-1\rangle 
+    \end{aligned}
+\end{equation}
+和厄米共轭
+\begin{equation}
+    \begin{aligned}
+        \langle jm|\hat{J}_-&=\sqrt{j\left( j+1 \right) -m\left( m+1 \right)}\hbar \langle j,m+1|
+\\
+\langle jm|\hat{J}_+&=\sqrt{j\left( j+1 \right) -m\left( m-1 \right)}\hbar \langle j,m-1|
+    \end{aligned}
+\end{equation}
+
+计算
+\begin{equation}
+    \begin{aligned}
+        \langle jm|\hat{F}{\color[RGB]{240, 0, 0} \hat{J}_-\hat{J}_+|jm\rangle }&=\langle jm|\hat{F}{\color[RGB]{240, 0, 0} \left[ j\left( j+1 \right) -m\left( m+1 \right) \right] \hbar ^2|jm\rangle }
+\\
+&=\left[ j\left( j+1 \right) -m\left( m+1 \right) \right] \hbar ^2\langle jm|\hat{F}|jm\rangle 
+    \end{aligned}
+\end{equation}
+计算
+\begin{equation}
+    \begin{aligned}
+        {\color[RGB]{240, 0, 0} \langle jm|\hat{J}_-}\hat{F}{\color[RGB]{240, 0, 0} \hat{J}_+|jm\rangle }&={\color[RGB]{240, 0, 0} \sqrt{j\left( j+1 \right) -m\left( m+1 \right)}\hbar \langle j,m+1|}\hat{F}{\color[RGB]{240, 0, 0} \sqrt{j\left( j+1 \right) -m\left( m+1 \right)}\hbar |j,m+1\rangle }
+\\
+&=\left[ j\left( j+1 \right) -m\left( m+1 \right) \right] \hbar ^2\langle j,m+1|\hat{F}|j,m+1\rangle 
+    \end{aligned}
+\end{equation}
+因为
+\begin{equation}
+    \langle jm|\hat{F}\hat{J}_-\hat{J}_+|jm\rangle =\langle jm|\hat{J}_-\hat{F}\hat{J}_+|jm\rangle 
+\end{equation}
+所以
+\begin{equation}
+    \langle jm|\hat{F}|jm\rangle =\langle j,m+1|\hat{F}|j,m+1\rangle 
+\end{equation}
+同样地，计算
+\begin{equation}
+    \begin{aligned}
+        \langle jm|\hat{F}{\color[RGB]{240, 0, 0} \hat{J}_+\hat{J}_-|jm\rangle }&=\langle jm|\hat{F}\left[ j\left( j+1 \right) -m\left( m-1 \right) \right] \hbar ^2|jm\rangle 
+\\
+&=\left[ j\left( j+1 \right) -m\left( m-1 \right) \right] \hbar ^2\langle jm|\hat{F}|jm\rangle 
+    \end{aligned}
+\end{equation}
+计算
+\begin{equation}
+    \begin{aligned}
+        {\color[RGB]{240, 0, 0} \langle jm|\hat{J}_+}\hat{F}{\color[RGB]{240, 0, 0} \hat{J}_-|jm\rangle }&={\color[RGB]{240, 0, 0} \sqrt{j\left( j+1 \right) -m\left( m-1 \right)}\hbar \langle j,m+1|}\hat{F}{\color[RGB]{240, 0, 0} \sqrt{j\left( j+1 \right) -m\left( m-1 \right)}\hbar |j,m-1\rangle }
+\\
+&=\left[ j\left( j+1 \right) -m\left( m-1 \right) \right] \hbar ^2\langle j,m-1|\hat{F}|j,m-1\rangle 
+    \end{aligned}
+\end{equation}
+因为
+\begin{equation}
+     \langle jm|\hat{F}\hat{J}_+\hat{J}_-|jm\rangle =\langle jm|\hat{J}_+\hat{F}\hat{J}_-|jm\rangle 
+\end{equation}
+所以
+\begin{equation}
+    \langle jm|\hat{F}|jm\rangle =\langle j,m-1|\hat{F}|j,m-1\rangle  
+\end{equation}
+共同本征态上的平均值与磁量子数无关.
+
 
 
 \newpage
@@ -1340,11 +1460,16 @@ $$\frac{d^2\overline{A}}{dt^2} = -\frac{1}{\hbar^2} \left\langle \left[ \hat{A},
     \end{aligned}
 \end{equation}
 
-
+\newpage
 \subsection{2.34}
 证明在一维束缚态问题中，位能在基态的平均值满足如下关系：
 $$\langle V \rangle_0 = E_0 - \frac{m}{2\hbar^2} \sum_n (E_n - E_0)^2 |\langle n| x | 0 \rangle|^2$$
 再证明 $\langle V \rangle_0 \leq (5E_0 - E_1)/4, \quad E_0 \leq E_1 \leq E_2 \leq \cdots$
+
+\subsubsection{解答}
+
+
+
 
 \subsection{2.35}
 能量为 $E$ 的一束粒子穿过小孔，投射到距离小孔距离为 $L$ 的屏上。用不确定原理，证明通过不断减小孔径来达到减少屏上斑点直径是不可行的。估算使屏上斑点直径最小时小孔的直径。
