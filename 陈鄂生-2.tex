@@ -11,7 +11,7 @@
 \subsection{2.1}
 证明空间反演算符 $\hat{\Pi}[\hat{\Pi}\psi(x)=\psi(-x)]$ 是厄米算符。指出在什么条件下，$\hat{p}=-i\hbar\frac{d}{dx}$ 是厄米算符。
 
-\subusbsection{解答}
+\subusubsection{解答}
 \begin{equation}
     \begin{aligned}
         \int_{-\infty}^{+\infty}{\mathrm{d}x}\psi ^*(x)\hat{\Pi}\varphi (x)&=\int_{-\infty}^{+\infty}{\mathrm{d}x}\psi ^*(x)\varphi (-x)
@@ -34,6 +34,33 @@
 
 \subsubsection{解答2}
 
+取任意波函数
+
+\begin{equation}
+    \begin{aligned}
+        \int_{-\infty}^{+\infty}{\psi ^*(x)\hat{p}\varphi (x)\mathrm{d}x}&=\int_{-\infty}^{+\infty}{\psi ^*(x)\left( -\mathrm{i}\hbar \frac{\mathrm{d}}{\mathrm{d}x} \right) \varphi (x)\mathrm{d}x}
+\\
+&=-\mathrm{i}\hbar \int_{-\infty}^{+\infty}{\psi ^*(x)\frac{\mathrm{d}\varphi (x)}{\mathrm{d}x}\mathrm{d}x}
+\\
+&=-\mathrm{i}\hbar \int_{-\infty}^{+\infty}{\psi ^*(x)\mathrm{d}\varphi (x)}
+\\
+&=-\mathrm{i}\hbar \left[ \psi ^*(x)\varphi (x)\mid_{-\infty}^{+\infty}-\int_{-\infty}^{+\infty}{\varphi (x)\mathrm{d}\psi ^*(x)} \right] 
+\\
+&=\mathrm{i}\hbar \int_{-\infty}^{+\infty}{\frac{\mathrm{d}\psi ^*(x)}{\mathrm{d}x}\varphi (x)\mathrm{d}x}
+\\
+&=\int_{-\infty}^{+\infty}{\left[ \mathrm{i}\hbar \frac{\mathrm{d}\psi ^*(x)}{\mathrm{d}x} \right] \varphi (x)\mathrm{d}x}
+\\
+&=\int_{-\infty}^{+\infty}{\left[ -\mathrm{i}\hbar \frac{\mathrm{d}\psi (x)}{\mathrm{d}x} \right] ^*\varphi (x)\mathrm{d}x}
+\\
+&=\int_{-\infty}^{+\infty}{\left[ \left( -\mathrm{i}\hbar \frac{\mathrm{d}}{\mathrm{d}x} \right) \psi (x) \right] ^*\varphi (x)\mathrm{d}x}
+\\
+&=\int_{-\infty}^{+\infty}{\bigl[ \hat{p}\psi (x) \bigr] ^*\varphi (x)\mathrm{d}x}
+    \end{aligned}
+\end{equation}
+其中
+\begin{equation}
+    \psi ^*(x)\varphi (x)\mid_{-\infty}^{+\infty}=0
+\end{equation}
 
 最终得到
 \begin{equation}
@@ -556,8 +583,7 @@ $$\psi(0) = \frac{1}{2} \left( \sqrt{2}\psi_0 + \psi_1 + \psi_2 \right)$$
 \subsection{2.28}
 设归一化波函数 $|\psi\rangle$ 满足薛定谔方程 $i \hbar \frac{\partial}{\partial t} |\psi\rangle = \hat{H} |\psi\rangle$。定义密度算符（矩阵）为 $\rho = |\psi\rangle \langle \psi|$。(1) 证明任意力学量 $\hat{F}$ 在 $|\psi\rangle$ 态中的平均值可表示为 tr$(\hat{F}\rho)$；(2) 求出 $\rho$ 的本征值；(3) 导出 $\rho$ 随时间变化的方程。
 
-\subsubsection{解答}
-(1)
+\subsubsection{解答(1)}
 \begin{equation}
     \begin{aligned}
         \bar{F}&=\langle \psi |\hat{F}|\psi \rangle 
@@ -573,6 +599,15 @@ $$\psi(0) = \frac{1}{2} \left( \sqrt{2}\psi_0 + \psi_1 + \psi_2 \right)$$
 &=\mathrm{tr}\left( \hat{F}\rho \right) 
     \end{aligned}
 \end{equation}
+
+
+\subsubsection{解答2.1}
+
+
+\subsubsection{解答2.2}
+
+\subsubsection{解答3}
+
 
 
 \subsection{2.29}
@@ -959,14 +994,25 @@ $$\hat{L}_n=\hat{\boldsymbol{L}}\cdot \boldsymbol{n}=\hat{L}_x\sin \alpha \cos \
 3.方程
 \begin{equation}
     \begin{aligned}
-        \hat{L}_+|lm\rangle &=\hbar \sqrt{l\left( l+1 \right) -m\left( m+1 \right)}|l,m+1\rangle 
+        \hat{L}_+|lm\rangle &=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar |l,m+1\rangle 
 \\
-\hat{L}_-|lm\rangle &=\hbar \sqrt{l\left( l+1 \right) -m\left( m-1 \right)}|l,m-1\rangle 
+\hat{L}_-|lm\rangle &=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar |l,m-1\rangle 
 \\
-\hat{L}_z|lm\rangle &=\hbar m|lm\rangle 
+\hat{L}_z|lm\rangle &=m\hbar |lm\rangle 
     \end{aligned}
 \end{equation}
-4.
+厄米共轭
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_+&=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\,\hbar \langle l,m-1|
+\\
+\langle lm|\hat{L}_-&=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\,\hbar \langle l,m+1|
+\\
+\langle lm|\hat{L}_z&=m\hbar \,\langle lm|
+    \end{aligned}
+\end{equation}
+4.计算一次方
+4.1
 \begin{equation}
     \begin{aligned}
         \hat{L}_n&=\hat{\boldsymbol{L}}\cdot \boldsymbol{n}
@@ -988,29 +1034,65 @@ $$\hat{L}_n=\hat{\boldsymbol{L}}\cdot \boldsymbol{n}=\hat{L}_x\sin \alpha \cos \
 &=\frac{1}{2}\sin \alpha \left( e^{-\mathrm{i}\beta}\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_- \right) +\cos \alpha \hat{L}_z
     \end{aligned}
 \end{equation}
-5.
+4.2计算
 \begin{equation}
     \begin{aligned}
         \langle \hat{L}_n\rangle &=\langle lm|\hat{L}_n|lm\rangle 
-        \\
+\\
 &=\langle lm|\left[ \frac{1}{2}\sin \alpha \left( e^{-i\beta}\hat{L}_++e^{i\beta}\hat{L}_- \right) +\cos \alpha \hat{L}_z \right] |lm\rangle 
 \\
 &=\frac{1}{2}\sin \alpha \left( e^{-i\beta}\langle lm|\hat{L}_+|lm\rangle +e^{i\beta}\langle lm|\hat{L}_-|lm\rangle \right) +\cos \alpha \langle lm|\hat{L}_z|lm\rangle 
 \\
-&=\frac{1}{2}\sin \alpha \left( e^{-i\beta}\langle lm|\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar |l,m+1\rangle +e^{i\beta}\langle lm|\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar |l,m-1\rangle \right) +\cos \alpha \langle lm|m\hbar |lm\rangle 
-\\
-&=\frac{1}{2}\sin \alpha \left( e^{-i\beta}\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \langle lm|l,m+1\rangle +e^{i\beta}\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \langle lm|l,m-1\rangle \right) +\cos \alpha m\hbar \langle lm|lm\rangle 
-\\
-&=\frac{1}{2}\sin \alpha \left( e^{-i\beta}\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \delta _{ll}\delta _{m,m+1}+e^{i\beta}\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \delta _{ll}\delta _{m,m-1} \right) +\cos \alpha m\hbar \delta _{ll}\delta _{mm}
-\\
-&=\frac{1}{2}\sin \alpha \left( e^{-i\beta}\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \cdot 0+e^{i\beta}\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \cdot 0 \right) +\cos \alpha m\hbar \cdot 1
+&=\frac{1}{2}\sin \alpha \left( e^{-i\beta}\cdot 0+e^{i\beta}\cdot 0 \right) +\cos \alpha m\hbar \cdot 1
 \\
 &=m\hbar \cos \alpha 
     \end{aligned}
 \end{equation}
+其中
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_+|lm\rangle &=\langle lm|\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar |l,m+1\rangle 
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \langle lm|l,m+1\rangle 
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \delta _{ll}\delta _{m,m+1}
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \cdot 0
+\\
+&=0
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_-|lm\rangle &=\langle lm|\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar |l,m-1\rangle 
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \langle lm|l,m-1\rangle 
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \delta _{ll}\delta _{m,m-1}
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \cdot 0
+\\
+&=0
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_z|lm\rangle &=\langle lm|m\hbar |lm\rangle 
+\\
+&=m\hbar \langle lm|lm\rangle 
+\\
+&=m\hbar \delta _{ll}\delta _{mm}
+\\
+&=m\hbar \cdot 1
+\\
+&=m\hbar 
+    \end{aligned}
+\end{equation}
 
-6.
-计算
+5.计算二次方
+5.1计算
 \begin{equation}
     \begin{aligned}
         \hat{L}_{n}^{2}&=\left[ \frac{1}{2}\sin \alpha \left( e^{-\mathrm{i}\beta}\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_- \right) +\cos \alpha \hat{L}_z \right] \left[ \frac{1}{2}\sin \alpha \left( e^{-\mathrm{i}\beta}\hat{L}_++e^{\mathrm{i}\beta}\hat{L}_- \right) +\cos \alpha \hat{L}_z \right] 
@@ -1034,7 +1116,7 @@ $$\hat{L}_n=\hat{\boldsymbol{L}}\cdot \boldsymbol{n}=\hat{L}_x\sin \alpha \cos \
 &+\cos ^2\alpha \hat{L}_{z}^{2}
     \end{aligned}
 \end{equation}
-计算
+5.2计算
 \begin{equation}
     \begin{aligned}
         \langle \hat{L}_{n}^{2}\rangle &=\langle lm|\hat{L}_{n}^{2}|lm\rangle 
@@ -1059,25 +1141,131 @@ $$\hat{L}_n=\hat{\boldsymbol{L}}\cdot \boldsymbol{n}=\hat{L}_x\sin \alpha \cos \
 其中
 \begin{equation}
     \begin{aligned}
-        \langle lm|\hat{L}_{+}^{2}|lm\rangle &=0
+        \langle lm|\hat{L}_{+}^{2}|lm\rangle &=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\,\hbar \langle l,m-1|\cdot \sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar |l,m+1\rangle 
 \\
-\langle lm|\hat{L}_{-}^{2}|lm\rangle &=0
+&=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \langle l,m-1|l,m+1\rangle 
 \\
-\langle lm|\hat{L}_+\hat{L}_-|lm\rangle &=\hbar ^2\left[ l\left( l+1 \right) -m\left( m-1 \right) \right] 
+&=\sqrt{\left[ l\left( l+1 \right) -m\left( m-1 \right) \right] \left[ l\left( l+1 \right) -m\left( m+1 \right) \right]}\hbar ^2\delta _{ll}\delta _{m-1,m+1}
 \\
-\langle lm|\hat{L}_-\hat{L}_+|lm\rangle &=\hbar ^2\left[ l\left( l+1 \right) -m\left( m+1 \right) \right] 
+&=\sqrt{\left[ l\left( l+1 \right) -m\left( m-1 \right) \right] \left[ l\left( l+1 \right) -m\left( m+1 \right) \right]}\hbar ^2\cdot 0
 \\
-\langle lm|\hat{L}_+\hat{L}_z|lm\rangle &=0
-\\
-\langle lm|\hat{L}_z\hat{L}_+|lm\rangle &=0
-\\
-\langle lm|\hat{L}_-\hat{L}_z|lm\rangle &=0
-\\
-\langle lm|\hat{L}_z\hat{L}_-|lm\rangle &=0
-\\
-\langle lm|\hat{L}_{z}^{2}|lm\rangle &=m^2\hbar ^2
+&=0
     \end{aligned}
 \end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_{-}^{2}|lm\rangle &=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\,\hbar \langle l,m+1|\cdot \sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar |l,m-1\rangle 
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\,\hbar \sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \langle l,m+1|l,m-1\rangle 
+\\
+&=\sqrt{\left[ l\left( l+1 \right) -m\left( m+1 \right) \right] \left[ l\left( l+1 \right) -m\left( m-1 \right) \right]}\hbar ^2\delta _{ll}\delta _{m+1,m-1}
+\\
+&=\sqrt{\left[ l\left( l+1 \right) -m\left( m+1 \right) \right] \left[ l\left( l+1 \right) -m\left( m-1 \right) \right]}\hbar ^2\cdot 0
+\\
+&=0
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_+\hat{L}_-|lm\rangle &=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\,\hbar \langle l,m-1|\cdot \sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar |l,m-1\rangle 
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\,\hbar \sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \langle l,m-1|l,m-1\rangle 
+\\
+&=\sqrt{\left[ l\left( l+1 \right) -m\left( m-1 \right) \right] ^2}\hbar ^2\delta _{ll}\delta _{m-1,m-1}
+\\
+&=\left[ l\left( l+1 \right) -m\left( m-1 \right) \right] \hbar ^2\cdot 1
+\\
+&=\left[ l\left( l+1 \right) -m\left( m-1 \right) \right] \hbar ^2
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_-\hat{L}_+|lm\rangle &=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\,\hbar \langle l,m+1|\cdot \sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar |l,m+1\rangle 
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\,\hbar \sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \langle l,m+1|l,m+1\rangle 
+\\
+&=\sqrt{\left[ l\left( l+1 \right) -m\left( m+1 \right) \right] ^2}\hbar ^2\delta _{ll}\delta _{m+1,m+1}
+\\
+&=\left[ l\left( l+1 \right) -m\left( m+1 \right) \right] \hbar ^2\cdot 1
+\\
+&=\left[ l\left( l+1 \right) -m\left( m+1 \right) \right] \hbar ^2
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_+\hat{L}_z|lm\rangle &=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\,\hbar \langle l,m-1|\cdot m\hbar |lm\rangle 
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\,\hbar m\hbar \langle l,m-1|lm\rangle 
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\,m\hbar ^2\delta _{ll}\delta _{m-1,m}
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\,m\hbar ^2\cdot 0
+\\
+&=0
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_z\hat{L}_+|lm\rangle &=m\hbar \,\langle lm|\cdot \sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar |l,m+1\rangle 
+\\
+&=m\hbar \sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar \langle lm|l,m+1\rangle 
+\\
+&=m\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar ^2\delta _{ll}\delta _{m,m+1}
+\\
+&=m\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\hbar ^2\cdot 0
+\\
+&=0
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_-\hat{L}_z|lm\rangle &=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\,\hbar \langle l,m+1|\cdot m\hbar |lm\rangle 
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\,\hbar m\hbar \langle l,m+1|lm\rangle 
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\,m\hbar ^2\delta _{ll}\delta _{m+1,m}
+\\
+&=\sqrt{l\left( l+1 \right) -m\left( m+1 \right)}\,m\hbar ^2\cdot 0
+\\
+&=0
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_z\hat{L}_-|lm\rangle &=m\hbar \,\langle lm|\cdot \sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar |l,m-1\rangle 
+\\
+&=m\hbar \,\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar \langle lm|l,m-1\rangle 
+\\
+&=m\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar ^2\delta _{ll}\delta _{m,m-1}
+\\
+&=m\sqrt{l\left( l+1 \right) -m\left( m-1 \right)}\hbar ^2\cdot 1
+\\
+&=0
+    \end{aligned}
+\end{equation}
+且
+\begin{equation}
+    \begin{aligned}
+        \langle lm|\hat{L}_{z}^{2}|lm\rangle &=m\hbar \,\langle lm|\cdot m\hbar |lm\rangle 
+\\
+&=m\hbar m\hbar \langle lm|lm\rangle 
+\\
+&=m^2\hbar ^2\delta _{ll}\delta _{m,m}
+\\
+&=m^2\hbar ^2\cdot 1
+\\
+&=m^2\hbar ^2
+    \end{aligned}
+\end{equation}
+且
+
 
 \subsubsection{解答2}
 
