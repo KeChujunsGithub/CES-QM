@@ -566,6 +566,8 @@ $$H_n'(z) = 2nH_{n-1}(z)$$
 \subsection{2.24}
 质量为 $\mu$ 的粒子在外场作用下作一维运动 ($-\infty < x < +\infty$)。已知当其处于束缚态 $\psi_1(x)$ 时, 动能平均值等于 $E_1$, 并已知 $\psi_1(x)$ 是实函数。试求当粒子处于态 $\psi_2(x) = \psi_1(x) e^{ikx}$ ($k$ 为实数)时动量平均值 $\overline{p}$ 与动能平均值 $\overline{T}$。
 
+
+\newpage
 \subsection{2.25}
 一维谐振子哈密顿算符(取 $\hbar = \mu = \omega = 1$)为
 $$\hat{H} = \frac{1}{2}(x^2 + \hat{p}^2)$$
@@ -573,11 +575,122 @@ $$\hat{H} = \frac{1}{2}(x^2 + \hat{p}^2)$$
 $$\psi(0) = \frac{1}{2} \left( \sqrt{2}\psi_0 + \psi_1 + \psi_2 \right)$$
 求任意 t 时刻 x 与 p 的平均值 $\overline{x(t)}$ 与 $\overline{p(t)}$。
 
+\subsubsection{解答1}
+
+\newpage
 \subsection{2.26}
 证明在宽度为 $a$ 的一维无限深方势阱中的定态能量 $E > \hbar^2 / 2 \mu a^2$。
 
+\subsubsection{解答1}
+
+
+\newpage
 \subsection{2.27}
 (1) 如厄米算符 $\hat{A}$ 对任何态矢量 $|u\rangle$，有 $\langle u|\hat{A}|u\rangle > 0$，则称 $\hat{A}$ 是正定算符。求证算符 $\hat{A} = |a\rangle \langle a|$ 是厄米正定算符。(2) 如 $\hat{A}$ 是任一线性算符，证明 $\hat{A}^{\dagger} \hat{A}$ 是厄米正定算符，它的迹等于 $\hat{A}$ 在任意表象中的矩阵元的模平方之和，试推导，当且仅当 $\hat{A} = 0$ 时，tr$(\hat{A}^{\dagger} \hat{A}) = 0$ 才成立。
+
+\subsubsection{解答1}
+证明厄米性
+由于
+\begin{equation}
+    \hat{A}^{\dagger}=\left( |a\rangle \langle a| \right) ^{\dagger}=\langle a|^{\dagger}|a\rangle ^{\dagger}=|a\rangle \langle a|=\hat{A}
+\end{equation}
+得到
+\begin{equation}
+    \hat{A}^{\dagger}=\hat{A}
+\end{equation}
+即是厄米算符
+
+证明正定性
+\begin{equation}
+    \begin{aligned}
+        \langle u|\hat{A}|u\rangle &=\langle u|\left( |a\rangle \langle a| \right) |u\rangle 
+\\
+&=\langle u|a\rangle \langle a|u\rangle 
+\\
+&=\langle a|u\rangle ^*\langle a|u\rangle 
+\\
+&=\left| \langle a|u\rangle \right|^2\geqslant 0
+    \end{aligned}
+\end{equation}
+得到
+\begin{equation}
+    \langle u|\hat{A}|u\rangle \geqslant 0
+\end{equation}
+即是正定算符
+
+\subsubsection{解答2}
+证明厄米性
+由于
+\begin{equation}
+    \left( \hat{A}^{\dagger}\hat{A} \right) ^{\dagger}=\hat{A}^{\dagger}\left( \hat{A}^{\dagger} \right) ^{\dagger}=\hat{A}^{\dagger}\hat{A}
+\end{equation}
+得到
+\begin{equation}
+    \left( \hat{A}^{\dagger}\hat{A} \right) ^{\dagger}=\hat{A}^{\dagger}\hat{A}
+\end{equation}
+即是厄米算符
+
+令
+\begin{equation}
+    |\phi \rangle =\hat{A}|u\rangle 
+\end{equation}
+则
+\begin{equation}
+    \langle \phi |=\langle u|\hat{A}^{\dagger}
+\end{equation}
+得到
+\begin{equation}
+    \langle u|\hat{A}^{\dagger}\hat{A}|u\rangle =\langle \phi |\phi \rangle \geqslant 0
+\end{equation}
+即是正定算符
+
+求迹
+\begin{equation}
+    \begin{aligned}
+        \mathrm{tr}\left( \hat{A}^{\dagger}\hat{A} \right) &=\sum_n{\langle n|\hat{A}^{\dagger}\hat{A}|n\rangle}
+\\
+&=\sum_n{\langle n|\hat{A}^{\dagger}\left( \sum_m{|m\rangle \langle m|} \right) |\hat{A}|n\rangle}
+\\
+&=\sum_{n,m}{\langle n|\hat{A}^{\dagger}|m\rangle \langle m|\hat{A}|n\rangle}
+\\
+&=\sum_{n,m}{\langle m|\hat{A}|n\rangle ^*\langle m|\hat{A}|n\rangle}
+\\
+&=\sum_{n,m}{\left| \langle m|\hat{A}|n\rangle \right|^2}\geqslant 0
+    \end{aligned}
+\end{equation}
+其中
+\begin{equation}
+    \left( \langle m|\hat{A}|n\rangle \right) ^*=|n\rangle ^{\dagger}\hat{A}^{\dagger}\langle m|^{\dagger}=\langle n|\hat{A}^{\dagger}|m\rangle 
+\end{equation}
+
+当算符为0
+\begin{equation}
+    \hat{A}=0
+\end{equation}
+所有的矩阵元为0
+\begin{equation}
+    \langle m|\hat{A}|n\rangle =0
+\end{equation}
+则求迹结果为0
+\begin{equation}
+    \mathrm{tr}\left( \hat{A}^{\dagger}\hat{A} \right) =0
+\end{equation}
+
+
+第二种写法
+\begin{equation}
+    \begin{aligned}
+        \mathrm{tr}\left( \hat{A}^{\dagger}\hat{A} \right) &=\sum_n{\left( A^*A \right) _{nn}}
+\\
+&=\sum_{n,m}{A_{nm}^{*}A_{mn}}
+\\
+&=\sum_{n,m}{A_{nm}A_{mn}}
+\\
+&=\sum_{n,m}{\left| A_{nm} \right|^2}
+    \end{aligned}
+\end{equation}
+
+
 
 \newpage
 \subsection{2.28}
