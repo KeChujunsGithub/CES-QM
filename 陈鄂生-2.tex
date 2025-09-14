@@ -211,12 +211,199 @@ $$\sum_n (E_n - E_m)^2 | \langle n | x | m \rangle |^2 = \frac{\hbar^2}{\mu^2} \
 \\(3) 证明
 $$\sum_n (E_n - E_m) | \langle n | x | m \rangle |^2 = \frac{\hbar^2}{2\mu} $$
 
+
+\subsubsection{解答1}
+写了在word，但是没有整理好
+
+\subsubsection{解答2}
+1.由第一问结果
+\begin{equation}
+    \langle n|\hat{p}|m\rangle =\frac{\mathrm{i}\mu}{\hbar}\left( E_n-E_m \right) 
+\end{equation}
+得到
+\begin{equation}
+    \begin{aligned}
+        -\frac{\mathrm{i}\hbar}{\mu}\langle m|\hat{p}|n\rangle &=\left( E_m-E_n \right) \langle m|\hat{x}|n\rangle 
+\\
+-\frac{\mathrm{i}\hbar}{\mu}\langle n|\hat{p}|m\rangle &=\left( E_n-E_m \right) \langle n|\hat{x}|m\rangle 
+    \end{aligned}
+\end{equation}
+2.计算
+\begin{equation}
+    \begin{aligned}
+        \sum_n{\left( E_n-E_m \right) ^2}\left| \langle n|\hat{x}|m\rangle \right|^2&=\sum_n{\left( E_n-E_m \right) ^2\langle n|\hat{x}|m\rangle ^*\langle n|\hat{x}|m\rangle}
+\\
+&=\sum_n{\left( E_n-E_m \right) ^2\langle m|\hat{x}|n\rangle \langle n|\hat{x}|m\rangle}
+\\
+&=-\sum_n{{\color[RGB]{240, 0, 0} \left( E_m-E_n \right) \langle m|\hat{x}|n\rangle }\cdot {\color[RGB]{0, 0, 240} \left( E_n-E_m \right) \langle n|\hat{x}|m\rangle }}
+\\
+&=-\sum_n{\left( -\frac{\mathrm{i}\hbar}{\mu}\langle m|\hat{p}|n\rangle \right) \left( -\frac{\mathrm{i}\hbar}{\mu}\langle n|\hat{p}|m\rangle \right)}
+\\
+&=-\left( -\frac{\mathrm{i}\hbar}{\mu} \right) ^2\sum_n{\langle m|\hat{p}|n\rangle \langle n|\hat{p}|m\rangle}
+\\
+&=\frac{\hbar ^2}{\mu ^2}\langle m|\hat{p}\left( \sum_n{|n\rangle \langle n|} \right) \hat{p}|m\rangle 
+\\
+=\frac{\hbar ^2}{\mu ^2}\langle m|\hat{p}^2|m\rangle 
+    \end{aligned}
+\end{equation}
+
+\subsubsection{解答3}
+1.由第一问结果
+\begin{equation}
+    \langle n|\hat{p}|m\rangle =\frac{\mathrm{i}\mu}{\hbar}\left( E_n-E_m \right) 
+\end{equation}
+得到
+\begin{equation}
+    \begin{aligned}
+        -\frac{\mathrm{i}\hbar}{\mu}\langle m|\hat{p}|n\rangle &=\left( E_m-E_n \right) \langle m|\hat{x}|n\rangle 
+\\
+-\frac{\mathrm{i}\hbar}{\mu}\langle n|\hat{p}|m\rangle &=\left( E_n-E_m \right) \langle n|\hat{x}|m\rangle 
+    \end{aligned}
+\end{equation}
+2.计算
+\begin{equation}
+    \begin{aligned}
+        \sum_n{\left( E_n-E_m \right) \left| \langle n|\hat{x}|m\rangle \right|^2}&=\sum_n{\left( E_n-E_m \right) \langle n|\hat{x}|m\rangle ^*\langle n|\hat{x}|m\rangle}
+\\
+&=\sum_n{\left( E_n-E_m \right) \langle m|\hat{x}|n\rangle \langle n|\hat{x}|m\rangle}
+\\
+&=\frac{1}{2}\sum_n{\left[ \left( E_n-E_m \right) \langle m|\hat{x}|n\rangle \langle n|\hat{x}|m\rangle -\left( E_m-E_n \right) \langle m|\hat{x}|n\rangle \langle n|\hat{x}|m\rangle \right]}
+\\
+&=\frac{1}{2}\sum_n{\left[ \langle m|\hat{x}|n\rangle {\color[RGB]{240, 0, 0} \left( E_n-E_m \right) \langle n|\hat{x}|m\rangle }-{\color[RGB]{240, 0, 0} \left( E_m-E_n \right) \langle m|\hat{x}|n\rangle }\langle n|\hat{x}|m\rangle \right]}
+\\
+&=\frac{1}{2}\sum_n{\left[ \langle m|\hat{x}|n\rangle \left( {\color[RGB]{240, 0, 0} -\frac{i\hbar}{\mu}\langle n|\hat{p}|m\rangle } \right) -\left( {\color[RGB]{240, 0, 0} -\frac{i\hbar}{\mu}\langle m|\hat{p}|n\rangle } \right) \langle n|\hat{x}|m\rangle \right]}
+\\
+&=\frac{1}{2}\sum_n{\left[ -\frac{i\hbar}{\mu}\langle m|\hat{x}|n\rangle \langle n|\hat{p}|m\rangle +\frac{i\hbar}{\mu}\langle m|\hat{p}|n\rangle \langle n|\hat{x}|m\rangle \right]}
+\\
+&=-\frac{i\hbar}{2\mu}\left[ \langle m|\hat{x}\left( \sum_n{|n\rangle \langle n|} \right) \hat{p}|m\rangle -\langle m|\hat{p}\left( \sum_n{|n\rangle \langle n|} \right) \hat{x}|m\rangle \right] 
+\\
+&=-\frac{i\hbar}{2\mu}\left[ \langle m|x\hat{p}|m\rangle -\langle m|\hat{p}x|m\rangle \right] 
+\\
+&=-\frac{i\hbar}{2\mu}\langle m|\left( \hat{x}\hat{p}-\hat{p}\hat{x} \right) |m\rangle 
+\\
+&=-\frac{i\hbar}{2\mu}\langle m|\left[ \hat{x},\hat{p} \right] |m\rangle 
+\\
+&=-\frac{i\hbar}{2\mu}\langle m|i\hbar |m\rangle 
+\\
+&=-\frac{i\hbar}{2\mu}\cdot i\hbar \langle m|m\rangle 
+\\
+&=\frac{\hbar ^2}{2\mu}
+    \end{aligned}
+\end{equation}
+
+
+
 \newpage
 \subsection{2.7}
 设 $\hat{F}$ 为厄米算符，证明在能量表象中下式成立：
 $$\sum_{n} (E_n - E_k) |F_{nk}|^2 = \frac{1}{2} \langle k| [\hat{F}, [\hat{H}, \hat{F}]] |k \rangle$$
 
 \subsubsection{解答}
+等式左边写法1
+\begin{equation}
+    \begin{aligned}
+        \sum_n{\left( E_n-E_k \right) \left| F_{nk} \right|^2}&=\sum_n{\left( E_n-E_k \right) \left| \langle n|\hat{F}|k\rangle \right|^2}
+\\
+&=\sum_n{\left( E_n-E_k \right) \langle n|\hat{F}|k\rangle ^*\langle n|\hat{F}|k\rangle}
+\\
+&=\sum_n{\left( E_n-E_k \right) \langle k|\hat{F}^{\dagger}|n\rangle \langle n|\hat{F}|k\rangle}
+\\
+&=\sum_n{\left[ E_n\langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle -E_k\langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle \right]}
+\\
+&=\sum_n{\left[ \langle k|\hat{F}E_n|n\rangle \langle n|\hat{F}|k\rangle -\langle k|\hat{F}|n\rangle \langle n|\hat{F}{\color[RGB]{240, 0, 0} E_k|k\rangle } \right]}
+\\
+&=\sum_n{\left[ \langle k|\hat{F}\hat{H}|n\rangle \langle n|\hat{F}|k\rangle -\langle k|\hat{F}|n\rangle \langle n|\hat{F}{\color[RGB]{240, 0, 0} \hat{H}|k\rangle } \right]}
+\\
+&=\langle k|\hat{F}\hat{H}\left( \sum_n{|n\rangle \langle n|} \right) \hat{F}|k\rangle -\langle k|\hat{F}\left( \sum_n{|n\rangle \langle n|} \right) \hat{F}\hat{H}|k\rangle 
+\\
+&=\langle k|\hat{F}\hat{H}\hat{F}|k\rangle -\langle k|\hat{F}\hat{F}\hat{H}|k\rangle 
+\\
+&=\langle k|\hat{F}\left( \hat{H}\hat{F}-\hat{F}\hat{H} \right) |k\rangle 
+\\
+&=\langle k|\hat{F}\left[ \hat{H},\hat{F} \right] |k\rangle 
+    \end{aligned}
+\end{equation}
+等式左边写法2
+\begin{equation}
+    \begin{aligned}
+        \sum_n{\left( E_n-E_k \right) \left| F_{nk} \right|^2}&=\sum_n{\left( E_n-E_k \right) \left| \langle n|\hat{F}|k\rangle \right|^2}
+\\
+&=\sum_n{\left( E_n-E_k \right) \langle n|\hat{F}|k\rangle ^*\langle n|\hat{F}|k\rangle}
+\\
+&=\sum_n{\left( E_n-E_k \right) \langle k|\hat{F}^{\dagger}|n\rangle \langle n|\hat{F}|k\rangle}
+\\
+&=\sum_n{\left( E_n-E_k \right) \langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle}
+\\
+&=\sum_n{\left[ E_n\langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle -E_k\langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle \right]}
+\\
+&=\sum_n{\left[ \langle k|\hat{F}E_n|n\rangle \langle n|\hat{F}|k\rangle -{\color[RGB]{240, 0, 0} \langle k|E_k}\hat{F}|n\rangle \langle n|\hat{F}|k\rangle \right]}
+\\
+&=\sum_n{\left[ \langle k|\hat{F}\hat{H}|n\rangle \langle n|\hat{F}|k\rangle -{\color[RGB]{240, 0, 0} \langle k|\hat{H}}\hat{F}|n\rangle \langle n|\hat{F}|k\rangle \right]}
+\\
+&=\langle k|\hat{F}\hat{H}\left( \sum_n{|n\rangle \langle n|} \right) \hat{F}|k\rangle -\langle k|\hat{H}\hat{F}\left( \sum_n{|n\rangle \langle n|} \right) \hat{F}|k\rangle
+\\
+&=\langle k|\hat{F}\hat{H}\hat{F}|k\rangle -\langle k|\hat{H}\hat{F}\hat{F}|k\rangle 
+\\
+&=\langle k|\left( \hat{F}\hat{H}-\hat{H}\hat{F} \right) \hat{F}|k\rangle 
+\\
+&=\langle k|\left[ \hat{F},\hat{H} \right] \hat{F}|k\rangle 
+\\
+&=-\langle k|\left[ \hat{H},\hat{F} \right] \hat{F}|k\rangle 
+    \end{aligned}
+\end{equation}
+得到
+\begin{equation}
+    \sum_n{\left( E_n-E_k \right) \left| F_{nk} \right|^2}=\langle k|\hat{F}\left[ \hat{H},\hat{F} \right] |k\rangle =-\langle k|\left[ \hat{H},\hat{F} \right] \hat{F}|k\rangle 
+\end{equation}
+所以
+\begin{equation}
+    \begin{aligned}
+        \sum_n{\left( E_n-E_k \right) \left| F_{nk} \right|^2}&={\color[RGB]{240, 0, 0} \frac{1}{2}}\left[ \langle k|\hat{F}\left[ \hat{H},\hat{F} \right] |k\rangle -\langle k|\left[ \hat{H},\hat{F} \right] \hat{F}|k\rangle \right] 
+\\
+&=\frac{1}{2}\langle k|\left( \hat{F}\left[ \hat{H},\hat{F} \right] -\left[ \hat{H},\hat{F} \right] \hat{F} \right) |k\rangle 
+\\
+&=\frac{1}{2}\langle k|\left[ \hat{F},\left[ \hat{H},\hat{F} \right] \right] |k\rangle 
+    \end{aligned}
+\end{equation}
+
+\subsubsection{解答2：逆推}
+1.展开
+\begin{equation}
+    \begin{aligned}
+        \left[ \hat{F},\left[ \hat{H},\hat{F} \right] \right] &=\hat{F}\left[ \hat{H},\hat{F} \right] -\left[ \hat{H},\hat{F} \right] \hat{F}
+\\
+&=\hat{F}\left( \hat{H}\hat{F}-\hat{F}\hat{H} \right) -\left( \hat{H}\hat{F}-\hat{F}\hat{H} \right) \hat{F}
+\\
+&=\hat{F}\hat{H}\hat{F}-\hat{F}\hat{F}\hat{H}-\hat{H}\hat{F}\hat{F}+\hat{F}\hat{H}\hat{F}
+    \end{aligned}
+\end{equation}
+2.计算
+\begin{equation}
+    \begin{aligned}
+        \frac{1}{2}\langle k|\left[ \hat{F},\left[ \hat{H},\hat{F} \right] \right] |k\rangle &=\frac{1}{2}\langle k|\left( \hat{F}\hat{H}\hat{F}-\hat{F}\hat{F}\hat{H}-\hat{H}\hat{F}\hat{F}+\hat{F}\hat{H}\hat{F} \right) |k\rangle 
+\\
+&=\frac{1}{2}\left( \langle k|\hat{F}\hat{H}\hat{F}|k\rangle -\langle k|\hat{F}\hat{F}\hat{H}|k\rangle -\langle k|\hat{H}\hat{F}\hat{F}|k\rangle +\langle k|\hat{F}\hat{H}\hat{F}|k\rangle \right) 
+\\
+&=\frac{1}{2}\left[ \langle k|\hat{F}\hat{H}\left( \sum_n{|n\rangle \langle n|} \right) \hat{F}|k\rangle -\langle k|\hat{F}\left( \sum_n{|n\rangle \langle n|} \right) \hat{F}\hat{H}|k\rangle -\langle k|\hat{H}\left( \sum_n{|n\rangle \langle n|} \right) \hat{F}\hat{F}|k\rangle +\langle k|\hat{F}\hat{H}\left( \sum_n{|n\rangle \langle n|} \right) \hat{F}|k\rangle \right] 
+\\
+&=\frac{1}{2}\sum_n{\left[ \langle k|\hat{F}\hat{H}|n\rangle \langle n|\hat{F}|k\rangle -\langle k|\hat{F}|n\rangle \langle n|\hat{F}\hat{H}|k\rangle -\langle k|\hat{H}\hat{F}|n\rangle \langle n|\hat{F}|k\rangle +\langle k|\hat{F}\hat{H}|n\rangle \langle n|\hat{F}|k\rangle \right]}
+\\
+&=\frac{1}{2}\sum_n{\left[ \langle k|\hat{F}E_n|n\rangle \langle n|\hat{F}|k\rangle -\langle k|\hat{F}|n\rangle \langle n|\hat{F}E_k|k\rangle -\langle k|E_k\hat{F}|n\rangle \langle n|\hat{F}|k\rangle +\langle k|\hat{F}E_n|n\rangle \langle n|\hat{F}|k\rangle \right]}
+\\
+&=\frac{1}{2}\sum_n{\left[ E_n\langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle -E_k\langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle -E_k\langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle +E_n\langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle \right]}
+\\
+&=\sum_n{\left[ E_n\langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle -E_k\langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle \right]}
+\\
+&=\sum_n{\left( E_n-E_k \right) \langle k|\hat{F}|n\rangle \langle n|\hat{F}|k\rangle}
+\\
+&=\sum_n{\left( E_n-E_k \right) \langle n|\hat{F}|k\rangle ^*\langle n|\hat{F}|k\rangle}
+\\
+&=\sum_n{\left( E_n-E_k \right) \left| \langle n|\hat{F}|k\rangle \right|^2}
+\\
+&=\sum_n{\left( E_n-E_k \right) \left| F_{nk} \right|^2}
+    \end{aligned}
+\end{equation}
+
 
 \newpage
 \subsection{2.8}
